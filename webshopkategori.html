@@ -55,14 +55,9 @@
     </a>
 
 
-
-
-
-
-
-    <template>
+<template>
         <article>
-            <h2 data-navn></h2>
+            <h2 data-header></h2>
             <img data-image src="" alt="">
         </article>
    </template>
@@ -76,7 +71,12 @@
 
 
 
+
+
+
     <script>
+
+
         //        Billeder til Webshop
 
         let jSonUrl2 = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/produkter";
@@ -88,18 +88,22 @@
         async function hentJson() {
             let jsonData = await fetch(jSonUrl2);
             produkter = await jsonData.json();
-            console.log(produkter);
+            console.log("produkter");
+            visProdukter();
 
 
         }
 
+        function visProdukter(){
+
         produkter.forEach(produkt => {
-                    console.log(produkt);
+                    console.log("produkt");
                     let klon = template.cloneNode(true).content;
                     console.log(klon);
                     klon.querySelector("[data-navn]"), textContent = produkt.title.rendered;
-                    klon.querySelector("[data-image]").src = webshop.acf.genstand.url;
-
+                    klon.querySelector("[data-image]").src = produkt.acf.genstand.url;
+                    display.appendChild(klon);
+                    });
                 }
                 //                klon.querySelector("[data-image]").alt = restaurant.afc.alt;
 
@@ -108,8 +112,7 @@
                 //                location.href = "singlebutik.html?id=" + Specialbutik.id;
                 //            });
                 //            //                console.log("virker jeg :)");
-                //            display.appendChild(klon);
-                //        });
+                //
 
     </script>
 </body>
