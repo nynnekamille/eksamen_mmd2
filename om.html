@@ -45,18 +45,18 @@
             </ul>
         </div>
     </nav>
-    <section id="header">
-        <a href="forside.html">
-            <div id="logo"></div>
-        </a>
+    <section class="header">
 
-        <a href="facebook.dk">
-            <div id="facebook_logo"></div>
-        </a>
+        <div class="logo"> <a href="forside.html">logo</a></div>
 
-        <a href="instagram.com">
-            <div id="instagram_logo"></div>
-        </a>
+
+
+        <div class="facebook_logo"><a href="facebook.dk">hej  </a></div>
+
+
+
+        <div class="instagram_logo"><a href="instagram.com">dada </a></div>
+
     </section>
 
     <button class="om_knapper"><p>Holdet</p></button>
@@ -94,34 +94,33 @@
 </body>
 
 <style>
-    /*    header    */
-
-    #header {
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: auto;
-        grid-gap: 20px;
-        max-width: 100vw;
+    body {
+        margin: 0;
     }
 
-    #logo {
-        width: 50px;
-        height: 50px;
+    /*    header    */
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo face insta";
+    }
+
+    .logo {
+        grid-area: logo;
         background-color: gray;
     }
 
     /*  SoMe ikoner  */
 
-    #facebook_logo {
-        width: 35px;
-        height: 35px;
-        background-color: blue;
-        grid-column: 60%;
+    .facebook_logo {
+        grid-area: face;
+        background-color: green;
     }
 
-    #instagram_logo {
-        width: 35px;
-        height: 35px;
+    .instagram_logo {
+        grid-area: insta;
+
         background-color: palevioletred;
     }
 
@@ -129,17 +128,17 @@
 
     #holdet {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-gap: 50px;
     }
 
     #tekst_hold {
-        grid-column: 50%
+        grid-column: 1/2;
+
     }
 
     #billede_hold {
-        grid-column: 50%;
+        grid-column: 2/3;
         background-color: brown
     }
 
@@ -300,7 +299,6 @@
     #samarbejde {
         background-color: lightgreen;
     }
-
 </style>
 
 
