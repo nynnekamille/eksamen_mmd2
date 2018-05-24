@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+
+            <span class="first"></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="XXX">
+                    <li>
+                        <h2>Forside</h2>
+                    </li>
+                </a>
+                <a href="XXX">
+                    <li>
+                        <h2>En anden side</h2>
+                    </li>
+                </a>
+
+                <a href="XXX">
+                    <li>
+                        <h2>En helt anden side</h2>
+                    </li>
+                </a>
+
+                <a href="XXX">
+                    <li>
+                        <h2 id="brev">Tilmeld Nyhedsbrev</h2>
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+    </nav>
+    <section id="header">
+        <a href="forside.html">
+            <div id="logo"></div>
+        </a>
+
+        <a href="facebook.dk">
+            <div id="facebook_logo"></div>
+        </a>
+
+        <a href="instagram.com">
+            <div id="instagram_logo"></div>
+        </a>
+    </section>
+
+    <button class="om_knapper"><p>Holdet</p></button>
+    <button class="om_knapper"><p>Samarbejdspartnere</p></button>
+    <button class="om_knapper"><p>Historie</p></button>
+
+
+
+    <section id="info_grafik">
+        <h1>Infografik</h1>
+    </section>
+
+    <section id="holdet">
+        <div id="tekst_hold">
+            <h2>Holdet</h2>
+            <p>Her skal der skrives noget tekst om holdet.</p>
+        </div>
+        <div id="billede_hold"></div>
+    </section>
+
+    <section id="samarbejde">
+        <div id="billede_samarbejde"></div>
+        <div id="tekst_samarbejde">
+            <h1>Samarbejdspartnere</h1>
+            <p>Her skriver vi noget om samarbejdspartnere</p>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script></script>
+</body>
+
+<style>
+    /*    header    */
+
+    #header {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        max-width: 100vw;
+    }
+
+    #logo {
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+    }
+
+    /*  SoMe ikoner  */
+
+    #facebook_logo {
+        width: 35px;
+        height: 35px;
+        background-color: blue;
+        grid-column: 60%;
+    }
+
+    #instagram_logo {
+        width: 35px;
+        height: 35px;
+        background-color: palevioletred;
+    }
+
+    /*    Holdet     */
+
+    #holdet {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-gap: 50px;
+    }
+
+    #tekst_hold {
+        grid-column: 50%
+    }
+
+    #billede_hold {
+        grid-column: 50%;
+        background-color: brown
+    }
+
+
+
+
+    /*  Menu knap og rul ud  */
+
+    #menu a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        vertical-align: middle;
+        font-family: grotesk;
+        transition: color 0.3s ease;
+    }
+
+    #menu a:hover {
+        color: #f4912d;
+    }
+
+    #menuToggle {
+        display: block;
+        position: fixed;
+
+        /*Radius*/
+        width: 50px;
+        height: 50px;
+
+        /*Placering*/
+        top: 20px;
+        left: 30px;
+
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+        background-color: #F5F0E4;
+        border: 2px;
+        border-color: #334151;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        cursor: pointer;
+
+        opacity: 0;
+        z-index: 2;
+
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-left: 8px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #334151;
+        border-radius: 10px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    .first {
+        margin-top: 14px;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #282f43;
+    }
+
+
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+
+    #menu {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        background: #FBFAF2;
+        list-style-type: none;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+
+    #menuToggle input:checked~ul {
+        transform: none;
+    }
+
+    .testdok {
+        width: 100%;
+        text-align: center;
+    }
+
+    /*  Logo  */
+
+    /*  Sektion Infografik  */
+
+    #info_grafik {
+        background-color: lightblue;
+    }
+
+    /*  Sektion holdet  */
+
+    #holdet {
+        background-color: lightcoral;
+    }
+
+    /*  Sektion samarbejdspartnere */
+
+    #samarbejde {
+        background-color: lightgreen;
+    }
+
+</style>
+
+
+</html>
