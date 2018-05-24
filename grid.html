@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="logo">logo</div>
+        <div id="face">face</div>
+        <div id="insta">insta</div>
+    </div>
+
+
+    <script></script>
+</body>
+
+<style>
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo insta insta" "face face face";
+
+    }
+
+    #logo {
+        background-color: gainsboro;
+        grid-area: logo;
+    }
+
+    #face {
+        background-color: blue;
+        grid-area: face;
+    }
+
+    #insta {
+        background-color: red;
+        grid-area: insta;
+    }
+</style>
+
+
+</html>
+

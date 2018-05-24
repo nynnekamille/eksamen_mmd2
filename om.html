@@ -44,95 +44,175 @@
 
             </ul>
         </div>
-        <div id="logo">Logo</div>
-        <div id="kurv">Kurv</div>
     </nav>
+    <section class="header">
 
-    <a href="forside.html">
-        <div id="logo" class=""></div>
-    </a>
+        <div class="logo"> <a href="forside.html">logo</a></div>
 
-    <a href="kurv.html">
-        <div id="kurv"></div>
-    </a>
 
-    <section>
+
+        <div class="facebook_logo"><a href="facebook.dk">hej  </a></div>
+
+
+
+        <div class="instagram_logo"><a href="instagram.com">dada </a></div>
+
+    </section>
+    <section id="knapper">
+        <button class="om_knapper"><p>Holdet</p></button>
+        <button class="om_knapper"><p>Samarbejdspartnere</p></button>
+        <button class="om_knapper"><p>Historie</p></button>
+    </section>
+
+
+
+    <section id="info_grafik">
+        <h1>Infografik</h1>
+    </section>
+
+    <section id="holdet">
+        <div id="tekst_hold">
+            <h2>Holdet</h2>
+            <p>Her skal der skrives noget tekst om holdet.</p>
+        </div>
+        <div id="billede_hold"></div>
+    </section>
+
+    <section id="samarbejde">
+        <div id="billede_samarbejde"></div>
+        <div id="tekst_samarbejde">
+            <h1>Samarbejdspartnere</h1>
+            <p>Her skriver vi noget om samarbejdspartnere</p>
+        </div>
 
     </section>
 
-    <template>
-
-    <article>
-            <h2 data-header></h2>
-            <img data-image src="" alt="">
-    </article>
-
-</template>
 
 
-    <script>
-        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
-        let kategorier = [];
-        let template = document.querySelector("template");
-        let display = document.querySelector("section");
-
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        async function hentJson() {
-            let jsonData = await fetch(jSonUrl);
-            kategorier = await jsonData.json();
-            visKategorier();
-
-        }
-
-        function visKategorier() {
-            kategorier.forEach(kategori => {
-                let webshopkategori = kategori.tags;
-
-                if (webshopkategori == 9) {
-
-            let klon = template.cloneNode(true).content;
-            klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
-            klon.querySelector("[data-image]").src = kategori.acf.billede.url;
-            klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse;
 
 
-                    klon.querySelector("article").addEventListener("click", () => {
-                        location.href = "webshopkategori.html?kategori=" + kategori.categories;
-                    });
-
-                    display.appendChild(klon);
-                }
-            });
-
-        }
-    </script>
+    <script></script>
 </body>
 
-</html>
-
-
 <style>
-/*    Nav header */
-    nav{
+    body {
+        margin: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    /*  Tekst  */
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    a {
+        color: white;
+    }
+
+
+    /*    header    */
+
+    .header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "menu logo kurv";
+        grid-template-areas: "logo face insta";
     }
 
-    #logo{
-        background-color: gray;
+    .logo {
         grid-area: logo;
+        background-color: gray;
     }
 
-    #kurv{
-        background-color: #47505b;
-        grid-area: kurv;
+    /*  SoMe ikoner  */
+
+    .facebook_logo {
+        grid-area: face;
+        background-color: green;
+    }
+
+    .instagram_logo {
+        grid-area: insta;
+
+        background-color: palevioletred;
+    }
+
+    /*    Knapper   */
+
+    #knapper {
+        display: grid;
+    }
+
+    button {
+        background-color: #B4A1A0
+    }
+
+
+    /*    Infografik     */
+
+    #info_grafik {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: "infografik";
+        background-color: #47505B
+    }
+
+    /*    lav id eller class til infografik og giv den grid-area "infografik"*/
+
+    /*    Holdet     */
+
+    #holdet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "tekst billede";
+        background-color: rgb(185, 184, 180);
+    }
+
+    #tekst_hold {
+        grid-area: tekst;
+
+    }
+
+    #billede_hold {
+        grid-area: billede;
+        background-color: #ffffff
+    }
+
+    /*  Sektion samarbejdspartnere */
+
+    #samarbejde {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "billede tekst";
+        background-color: #D0D0D0;
+    }
+
+    #billede_samarbejde {
+        grid-area: billede;
+        background-color: rgba(208, 208, 208, 0.54);
+    }
+
+    #tekst_samarbejde {
+        grid-area: tekst;
     }
 
 
 
-/*    Menu  */
+
+
+    /*  Menu knap og rul ud  */
+
     #menu a {
         text-decoration: none;
         color: black;
@@ -265,5 +345,7 @@
         width: 100%;
         text-align: center;
     }
-
 </style>
+
+
+</html>

@@ -44,6 +44,8 @@
 
             </ul>
         </div>
+        <div id="logo">Logo</div>
+        <div id="kurv">Kurv</div>
     </nav>
 
     <a href="forside.html">
@@ -68,6 +70,7 @@
 
 
     <script>
+
 
         let urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams);
@@ -116,6 +119,27 @@
 
 
 <style>
+/*    Nav / header */
+     nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "menu logo kurv";
+    }
+
+    #logo{
+        background-color: gray;
+        grid-area: logo;
+    }
+
+    #kurv{
+        background-color: #47505b;
+        grid-area: kurv;
+    }
+
+
+
+
+
     #menu a {
         text-decoration: none;
         color: black;
