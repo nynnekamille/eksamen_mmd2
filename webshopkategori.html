@@ -55,40 +55,35 @@
     </a>
 
 
-<template>
+    <template>
         <article>
             <h2 data-header></h2>
             <img data-image src="" alt="">
         </article>
-   </template>
+    </template>
 
 
     <section>
     </section>
 
 
-
-
-
-
-
-
-
     <script>
 
+        let urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams);
+        let urlKategori = urlParams.get("kategori");
+        console.log(urlKategori);
 
-        //        Billeder til Webshop
 
-        let jSonUrl2 = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/produkter";
+        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
         let produkter = [];
         document.addEventListener("DOMContentLoaded", hentJson);
         let template = document.querySelector("template");
         let display = document.querySelector("section");
 
         async function hentJson() {
-            let jsonData = await fetch(jSonUrl2);
+            let jsonData = await fetch(jSonUrl);
             produkter = await jsonData.json();
-            console.log("produkter");
             visProdukter();
 
 
@@ -96,23 +91,23 @@
 
         function visProdukter(){
 
-        produkter.forEach(produkt => {
-                    console.log("produkt");
+            produkter.forEach(produkt => {
+
+                let kategori = produkt.categories;
+                console.log (kategori == urlKategori);
+
+                if (kategori == urlKategori) {
+
                     let klon = template.cloneNode(true).content;
-                    console.log(klon);
-                    klon.querySelector("[data-navn]"), textContent = produkt.title.rendered;
-                    klon.querySelector("[data-image]").src = produkt.acf.genstand.url;
+
+                    klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
+                    klon.querySelector("[data-image]").src = produkt.acf.billede.url;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
+
                     display.appendChild(klon);
-                    });
-                }
-                //                klon.querySelector("[data-image]").alt = restaurant.afc.alt;
-
-
-                //            klon.querySelector("article").addEventListener("click", () => {
-                //                location.href = "singlebutik.html?id=" + Specialbutik.id;
-                //            });
-                //            //                console.log("virker jeg :)");
-                //
+                    };
+                });
+            }
 
     </script>
 </body>
