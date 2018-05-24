@@ -58,10 +58,11 @@
         <div class="instagram_logo"><a href="instagram.com">dada </a></div>
 
     </section>
-
-    <button class="om_knapper"><p>Holdet</p></button>
-    <button class="om_knapper"><p>Samarbejdspartnere</p></button>
-    <button class="om_knapper"><p>Historie</p></button>
+    <section id="knapper">
+        <button class="om_knapper"><p>Holdet</p></button>
+        <button class="om_knapper"><p>Samarbejdspartnere</p></button>
+        <button class="om_knapper"><p>Historie</p></button>
+    </section>
 
 
 
@@ -96,7 +97,28 @@
 <style>
     body {
         margin: 0;
+        width: 100%;
+        background-color: black;
     }
+
+    /*  Tekst  */
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    a {
+        color: white;
+    }
+
 
     /*    header    */
 
@@ -124,23 +146,67 @@
         background-color: palevioletred;
     }
 
+    /*    Knapper   */
+
+    #knapper {
+        display: grid;
+    }
+
+    button {
+        background-color: #B4A1A0
+    }
+
+
+    /*    Infografik     */
+
+    #info_grafik {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: "infografik";
+        background-color: #47505B
+    }
+
+    /*    lav id eller class til infografik og giv den grid-area "infografik"*/
+
     /*    Holdet     */
 
     #holdet {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        grid-template-areas: "tekst billede";
+        background-color: rgb(185, 184, 180);
     }
 
     #tekst_hold {
-        grid-column: 1/2;
+        grid-area: tekst;
 
     }
 
     #billede_hold {
-        grid-column: 2/3;
-        background-color: brown
+        grid-area: billede;
+        background-color: #ffffff
     }
+
+    /*  Sektion samarbejdspartnere */
+
+    #samarbejde {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "billede tekst";
+        background-color: #D0D0D0;
+    }
+
+    #billede_samarbejde {
+        grid-area: billede;
+        background-color: rgba(208, 208, 208, 0.54);
+    }
+
+    #tekst_samarbejde {
+        grid-area: tekst;
+    }
+
 
 
 
@@ -278,26 +344,6 @@
     .testdok {
         width: 100%;
         text-align: center;
-    }
-
-    /*  Logo  */
-
-    /*  Sektion Infografik  */
-
-    #info_grafik {
-        background-color: lightblue;
-    }
-
-    /*  Sektion holdet  */
-
-    #holdet {
-        background-color: lightcoral;
-    }
-
-    /*  Sektion samarbejdspartnere */
-
-    #samarbejde {
-        background-color: lightgreen;
     }
 </style>
 

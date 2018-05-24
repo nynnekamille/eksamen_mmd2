@@ -44,6 +44,8 @@
 
             </ul>
         </div>
+        <div id="logo">Logo</div>
+        <div id="kurv">Kurv</div>
     </nav>
 
     <a href="forside.html">
@@ -54,11 +56,11 @@
         <div id="kurv"></div>
     </a>
 
-<section>
+    <section>
 
-</section>
+    </section>
 
-<template>
+    <template>
 
     <article>
             <h2 data-header></h2>
@@ -69,7 +71,6 @@
 
 
     <script>
-
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
         let kategorier = [];
         let template = document.querySelector("template");
@@ -84,23 +85,23 @@
 
         }
 
-        function visKategorier(){
-        kategorier.forEach(kategori => {
-            let webshopkategori = kategori.tags;
+        function visKategorier() {
+            kategorier.forEach(kategori => {
+                let webshopkategori = kategori.tags;
 
-            if (webshopkategori == 9) {
+                if (webshopkategori == 9) {
 
-            let klon = template.cloneNode(true).content;
-            klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
-            klon.querySelector("[data-image]").src = kategori.acf.genstand.url;
+                    let klon = template.cloneNode(true).content;
+                    klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
+                    klon.querySelector("[data-image]").src = kategori.acf.genstand.url;
 
-            klon.querySelector("article").addEventListener("click", () => {
-            location.href = "webshopkategori.html?kategori=" + kategori.categories;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = "webshopkategori.html?kategori=" + kategori.categories;
+                    });
+
+                    display.appendChild(klon);
+                }
             });
-
-                display.appendChild(klon);
-            }
-        });
 
         }
     </script>
@@ -110,6 +111,26 @@
 
 
 <style>
+/*    Nav header */
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "menu logo kurv";
+    }
+
+    #logo{
+        background-color: gray;
+        grid-area: logo;
+    }
+
+    #kurv{
+        background-color: #47505b;
+        grid-area: kurv;
+    }
+
+
+
+/*    Menu  */
     #menu a {
         text-decoration: none;
         color: black;
