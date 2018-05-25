@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Kvindesmedien</title>
     <link rel="stylesheet" href="">
 </head>
 
@@ -98,12 +98,12 @@
             visProdukt();
         }
 
-        function visProdukt(){
+        function visProdukt() {
 
             produkter.forEach(produkt => {
 
                 let produktId = produkt.id;
-                console.log (produktId == urlId);
+                console.log(produktId == urlId);
 
                 if (produktId == urlId) {
 
@@ -114,9 +114,9 @@
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
 
                     display.appendChild(klon);
-                    };
-                });
-            }
+                };
+            });
+        }
     </script>
 </body>
 

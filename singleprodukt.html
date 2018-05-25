@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Kvindesmedien</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -118,7 +118,7 @@
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
                     klon.querySelector("[data-info]").innerHTML = produkt.acf.beskrivelse_af_produkt;
-                    klon.querySelector("[data-pris]").innerHTML = produkt.acf.pris;
+                    klon.querySelector("[data-pris]").innerHTML = produkt.acf.pris + " kroner";
 
                     display.appendChild(klon);
                 };
