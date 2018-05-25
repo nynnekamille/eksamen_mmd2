@@ -65,7 +65,7 @@
 
 
 
-    <h2>Single produkt</h2>
+
     <template>
         <article>
             <img data-image src="" alt="">
@@ -113,7 +113,7 @@
 
                     let klon = template.cloneNode(true).content;
 
-                    klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
+                    klon.querySelector("[data-navn]"). textContent = produkt.title.rendered;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
                     klon.querySelector("[data-info]").innerHTML = produkt.acf.beskrivelse_af_produkt;
