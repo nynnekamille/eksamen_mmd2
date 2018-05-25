@@ -5,9 +5,24 @@ body {
 
 p {
     font-family: ralewayLight;
-    font-size: 2em;
-    color: #192243;
+    font-size: 1em;
 }
+
+h1 {
+    font-family: ralewayLight;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: didot;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: robotoRegular;
+    font-size: 1.5em;
+}
+
 
 /*----Text Typer---*/
 
@@ -19,4 +34,15 @@ p {
 @font-face {
     font-family: ralewayLight;
     src: url(raleway/raleway-light.ttf);
+}
+
+
+@font-face {
+    font-family: didot;
+    src: url(didot/didot.ttc);
+}
+
+@font-face {
+    font-family: robotoRegular;
+    src: url(roboto/roboto-regular.ttf);
 }
