@@ -4,7 +4,19 @@ body {
 }
 
 p {
+    font-family: ralewayLight;
     font-size: 2em;
     color: #192243;
-    font-family: 'Amatic SC', cursive;
+}
+
+/*----Text Typer---*/
+
+@font-face {
+    font-family: ralewayRegular;
+    src: url(raleway/raleway-regular.ttf);
+}
+
+@font-face {
+    font-family: ralewayLight;
+    src: url(raleway/raleway-light.ttf);
 }
