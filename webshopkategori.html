@@ -60,11 +60,11 @@
         <div id="kurv"></div>
     </a>
 
-    <h2>Enkelt kategori</h2>
     <template>
         <article>
-            <h2 data-header></h2>
+
             <img data-image src="" alt="">
+            <p data-navn></p>
         </article>
     </template>
 
@@ -105,7 +105,7 @@
 
                     let klon = template.cloneNode(true).content;
 
-                    klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
+                    klon.querySelector("[data-navn]").textContent = produkt.title.rendered;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
@@ -117,6 +117,7 @@
                 };
             });
         }
+
     </script>
 </body>
 
