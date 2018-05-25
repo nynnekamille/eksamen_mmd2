@@ -24,6 +24,11 @@ h3 {
 }
 
 
+img {
+    max-width: 100%;
+}
+
+
 /*----Text Typer---*/
 
 @font-face {
