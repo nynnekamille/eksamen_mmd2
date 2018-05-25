@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -44,8 +44,12 @@
 
             </ul>
         </div>
-        <div id="logo">Logo</div>
-        <div id="kurv">Kurv</div>
+        <div id="logo">
+            <p>Logo</p>
+        </div>
+        <div id="kurv">
+            <p>Kurv</p>
+        </div>
     </nav>
 
     <a href="forside.html">
@@ -56,11 +60,12 @@
         <div id="kurv"></div>
     </a>
 
+    <h2 data-header></h2>
 
     <template>
         <article>
-            <h2 data-header></h2>
             <img data-image src="" alt="">
+            <p data-navn></p>
         </article>
     </template>
 
@@ -70,12 +75,20 @@
 
 
     <script>
-
-
         let urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams);
         let urlKategori = urlParams.get("kategori");
         console.log(urlKategori);
+
+        if (urlKategori == 2) {
+            document.querySelector("[data-header]").textContent = "Borde";
+        }
+        if (urlKategori == 3) {
+            document.querySelector("[data-header]").textContent = "Lysestager";
+        }
+        if (urlKategori == 5) {
+            document.querySelector("[data-header]").textContent = "Bordunderstel";
+        }
 
 
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
@@ -92,29 +105,29 @@
 
         }
 
-        function visProdukter(){
+        function visProdukter() {
 
             produkter.forEach(produkt => {
 
                 let kategori = produkt.categories;
-                console.log (kategori == urlKategori);
+                console.log(kategori == urlKategori);
 
                 if (kategori == urlKategori) {
 
                     let klon = template.cloneNode(true).content;
 
-                    klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
+                    klon.querySelector("[data-navn]").textContent = produkt.title.rendered;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = "singleprodukt.html?id=" + produkt.id;
                     });
 
                     display.appendChild(klon);
-                    };
-                });
-            }
+                };
+            });
+        }
 
     </script>
 </body>
@@ -123,19 +136,20 @@
 
 
 <style>
-/*    Nav / header */
-     nav{
+    /*    Nav / header */
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "menu logo kurv";
     }
 
-    #logo{
+    #logo {
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv{
+    #kurv {
         background-color: #47505b;
         grid-area: kurv;
     }

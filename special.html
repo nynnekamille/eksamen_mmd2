@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Kvinde Smedien</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -44,8 +44,12 @@
 
             </ul>
         </div>
-        <div id="logo">Logo</div>
-        <div id="kurv">Kurv</div>
+        <div id="logo">
+            <p>Logo</p>
+        </div>
+        <div id="kurv">
+            <p>Kurv</p>
+        </div>
     </nav>
 
     <a href="forside.html">
@@ -55,7 +59,7 @@
     <a href="kurv.html">
         <div id="kurv"></div>
     </a>
-
+    <h2>Unika-design</h2>
     <section>
 
     </section>
@@ -71,7 +75,7 @@
 
 
     <script>
-        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
+        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/special";
         let kategorier = [];
         let template = document.querySelector("template");
         let display = document.querySelector("section");
@@ -87,17 +91,17 @@
 
         function visKategorier() {
             kategorier.forEach(kategori => {
-                let webshopkategori = kategori.tags;
+                let webshopkategori = kategori.acf.kategorieksempel;
 
-                if (webshopkategori == 9) {
+                if (webshopkategori == true) {
 
-                let klon = template.cloneNode(true).content;
-                klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
-                klon.querySelector("[data-image]").src = kategori.acf.billede.url;
-                klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse;
+                    let klon = template.cloneNode(true).content;
+                    klon.querySelector("[data-header]").textContent = kategori.acf.navn;
+                    klon.querySelector("[data-image]").src = kategori.acf.billede.url;
+                    klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse_af_billede;
 
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = "webshopkategori.html?kategori=" + kategori.categories;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = "webshopkategori.html?kategori=" + kategori.categories;
                     });
 
                     display.appendChild(klon);
