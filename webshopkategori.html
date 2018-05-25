@@ -107,6 +107,10 @@
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
 
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = "singleprodukt.html?id=" + produkt.id;
+                    });
+
                     display.appendChild(klon);
                     };
                 });

@@ -91,14 +91,13 @@
 
                 if (webshopkategori == 9) {
 
-            let klon = template.cloneNode(true).content;
-            klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
-            klon.querySelector("[data-image]").src = kategori.acf.billede.url;
-            klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse;
+                let klon = template.cloneNode(true).content;
+                klon.querySelector("[data-header]"), textContent = kategori.acf.navn;
+                klon.querySelector("[data-image]").src = kategori.acf.billede.url;
+                klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse;
 
-
-                    klon.querySelector("article").addEventListener("click", () => {
-                        location.href = "webshopkategori.html?kategori=" + kategori.categories;
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = "webshopkategori.html?kategori=" + kategori.categories;
                     });
 
                     display.appendChild(klon);
