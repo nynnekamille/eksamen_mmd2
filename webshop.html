@@ -91,9 +91,9 @@
 
         function visKategorier() {
             kategorier.forEach(kategori => {
-                let webshopkategori = kategori.tags;
+                let webshopkategori = kategori.acf.kategorieksempel;
 
-                if (webshopkategori == 9) {
+                if (webshopkategori == true) {
 
                     let klon = template.cloneNode(true).content;
                     klon.querySelector("[data-header]"), textContent = kategori.acf.navn;

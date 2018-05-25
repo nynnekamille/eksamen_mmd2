@@ -60,9 +60,10 @@
         <div id="kurv"></div>
     </a>
 
+    <h2 data-header></h2>
+
     <template>
         <article>
-
             <img data-image src="" alt="">
             <p data-navn></p>
         </article>
@@ -78,6 +79,10 @@
         console.log(urlParams);
         let urlKategori = urlParams.get("kategori");
         console.log(urlKategori);
+
+        if (urlKategori == 2) {
+            document.querySelector("[data-header]").textContent = "Borde";
+        }
 
 
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
