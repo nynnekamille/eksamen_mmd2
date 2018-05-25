@@ -107,7 +107,7 @@
 
                     klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = "singleprodukt.html?id=" + produkt.id;

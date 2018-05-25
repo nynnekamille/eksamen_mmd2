@@ -115,8 +115,9 @@
 
                     klon.querySelector("[data-header]"), textContent = produkt.acf.navn;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
-
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
+                    klon.querySelector("[data-info]").src = produkt.acf.beskrivelse_af_produkt;
+                    klon.querySelector("[data-pris]").alt = produkt.acf.pris;
 
                     display.appendChild(klon);
                 };
