@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -61,7 +61,7 @@
 
 
 
-
+    <h2>Single kategori</h2>
     <template>
         <article>
             <img data-image src="" alt="">
@@ -98,12 +98,12 @@
             visProdukt();
         }
 
-        function visProdukt(){
+        function visProdukt() {
 
             produkter.forEach(produkt => {
 
                 let produktId = produkt.id;
-                console.log (produktId == urlId);
+                console.log(produktId == urlId);
 
                 if (produktId == urlId) {
 
@@ -114,9 +114,10 @@
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse;
 
                     display.appendChild(klon);
-                    };
-                });
-            }
+                };
+            });
+        }
+
     </script>
 </body>
 
@@ -125,18 +126,19 @@
 
 <style>
     /*    Nav / header */
-     nav{
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "menu logo kurv";
     }
 
-    #logo{
+    #logo {
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv{
+    #kurv {
         background-color: #47505b;
         grid-area: kurv;
     }

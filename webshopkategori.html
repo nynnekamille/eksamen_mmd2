@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
         <div id="kurv"></div>
     </a>
 
-
+    <h2>Enkelt kategori</h2>
     <template>
         <article>
             <h2 data-header></h2>
@@ -70,8 +70,6 @@
 
 
     <script>
-
-
         let urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams);
         let urlKategori = urlParams.get("kategori");
@@ -92,12 +90,12 @@
 
         }
 
-        function visProdukter(){
+        function visProdukter() {
 
             produkter.forEach(produkt => {
 
                 let kategori = produkt.categories;
-                console.log (kategori == urlKategori);
+                console.log(kategori == urlKategori);
 
                 if (kategori == urlKategori) {
 
@@ -112,9 +110,9 @@
                     });
 
                     display.appendChild(klon);
-                    };
-                });
-            }
+                };
+            });
+        }
 
     </script>
 </body>
@@ -123,19 +121,20 @@
 
 
 <style>
-/*    Nav / header */
-     nav{
+    /*    Nav / header */
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "menu logo kurv";
     }
 
-    #logo{
+    #logo {
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv{
+    #kurv {
         background-color: #47505b;
         grid-area: kurv;
     }
