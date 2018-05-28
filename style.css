@@ -35,6 +35,23 @@ img {
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+.special {
+    position: relative;
+
+}
+
+.special h3 {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    width: 50%;
+    left: 20%;
+    background-color: aqua;
+    height: 15%;
+    border-radius: 0%;
+}
+
 /*----Text Typer---*/
 
 @font-face {
