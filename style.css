@@ -41,6 +41,12 @@ img {
 
 }
 
+.maps {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
 .special h3 {
     position: absolute;
     top: 10%;

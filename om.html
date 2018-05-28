@@ -99,9 +99,11 @@
         </div>
 
     </section>
-    <section id="maps">
+    <section class="maps">
+        <h1> Gittes Smedearbejde</h1>
+        <div id="map" style="width:600px;height:350px;"></div>
+        <p>Gitte har produceret smykke værker til kirker rundt om i Danmark. Ved dette kort kan du se hvilke kirker hun har leveret til og finde link til kirkens hjemmeside.</p>
 
-        <h1> Theis Google maps</h1>
     </section>
 
 
@@ -109,7 +111,358 @@
 
 
 
-    <script></script>
+    <script>
+        let map;
+
+        let centrum = {
+            lat: 56.263920,
+            //lat = latitude
+            lng: 10.301785
+            //lng = longitude
+        };
+
+        let mariakirken = {
+            lat: 55.6715774,
+            //lat = latitude
+            lng: 12.558171
+            //lng = longitude
+        };
+
+
+        let herfoelgekirke = {
+            lat: 55.417390,
+            //lat = latitude
+            lng: 12.148586
+            //lng = longitude
+        };
+
+
+        let jesus = {
+            lat: 55.665463,
+            //lat = latitude
+            lng: 12.522160
+            //lng = longitude
+        };
+
+        let frelser = {
+            lat: 55.672939,
+            //lat = latitude
+            lng: 12.594210
+            //lng = longitude
+        };
+
+        let markus = {
+            lat: 57.044023,
+            lng: 9.943443
+
+        };
+
+        let ringsted = {
+            lat: 55.445465,
+            lng: 11.786959
+
+        };
+
+        let broenshoej = {
+            lat: 55.705861,
+            lng: 12.498635
+        };
+
+
+        let hospiceskive = {
+            lat: 56.573260,
+            lng: 9.028138
+        }
+
+        let broendby = {
+            lat: 55.656418,
+            lng: 12.441864
+        }
+
+        let havdrupkirke = {
+            lat: 55.551524,
+            lng: 12.157115
+        }
+
+        let kapernaum = {
+            lat: 55.551524,
+            lng: 12.157115
+        }
+
+        let absalon = {
+            lat: 55.665392,
+            lng: 12.550272
+        }
+
+
+
+
+
+        //Hvad er forskellen mellem "var" og "map"? The difference is scoping. Funktion "var" is scoped to the nearest function block and let is scoped to the nearest enclosing block, which can be smaller than a function block. Both are global if outside any block. Also, variables declared with let are not accessible before they are declared in their enclosing block.As seen in the demo, this will throw a ReferenceError exception.
+
+
+        function initMap() {
+            var Marker = [];
+            //Placering
+            let map = new google.maps.Map(document.getElementById('map'), {
+                center: centrum,
+                zoom: 7
+            });
+
+
+            //----------Maria Kirken-----------
+            let markerMariaKirken = new google.maps.Marker({
+                position: mariakirken,
+                title: "MariaKirken",
+                map: map
+            });
+
+
+            //INFO-BOX
+            let infowindow1 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/maria.jpg' /><h1>Maria Kirken</h1>"
+
+            });
+
+            markerMariaKirken.addListener("click", () => {
+                infowindow1.open(map, markerMariaKirken);
+            });
+
+            //-----------------------
+
+            //Herfølge Kirke
+            let markerHerfoelgeKirke = new google.maps.Marker({
+                position: herfoelgekirke,
+                title: "herfoelgekirken",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow2 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<p>Herfølge Kirke</p>"
+
+            });
+
+            markerHerfoelgeKirke.addListener("click", () => {
+                infowindow2.open(map, markerHerfoelgeKirke);
+            });
+
+
+            //JESUSKIRKEN----------------------------
+            let markerJesus = new google.maps.Marker({
+                position: jesus,
+                title: "jesus",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow3 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<p>Jesus Kirken</p>"
+
+            });
+
+            markerJesus.addListener("click", () => {
+                infowindow3.open(map, markerJesus);
+            });
+
+
+
+
+            //-------------------
+
+
+            let markerFrelser = new google.maps.Marker({
+                position: frelser,
+                title: "frelserkirke",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow4 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/frelser.jpg' /><p>Vor Frelser Kirke</p>"
+
+            });
+
+            markerFrelser.addListener("click", () => {
+                infowindow4.open(map, markerFrelser);
+            });
+
+
+
+
+            //-------------------
+
+            let markerMarkus = new google.maps.Marker({
+                position: markus,
+                title: "Marcus Kirken",
+                map: map
+            });
+
+
+            //INFO-BOX
+            let infowindow5 = new google.maps.InfoWindow({
+                maxWidth: 400,
+                content: "<img src='gittekirker/markus.jpg' /><p>Google Earth</p><a href='www.google.com' /></a><h2>Sankt Markus Kirke</h2><p>Teglværksalle 17<br>9000 Aalborg<br>Tlf. 98126052</p><br><p>Hertil har Gitte udviklet lysestager, wuhuuu!</p>"
+
+
+
+            });
+
+            markerMarkus.addListener("click", () => {
+                infowindow5.open(map, markerMarkus);
+            });
+
+
+
+
+            //-------------------
+
+
+            let markerRingsted = new google.maps.Marker({
+                position: ringsted,
+                title: "Ringsted",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow6 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<p>Ringsted Kirke</p>"
+
+            });
+
+            markerRingsted.addListener("click", () => {
+                infowindow6.open(map, markerRingsted);
+            });
+
+
+
+
+            //-------------------
+
+            let markerBroenshoej = new google.maps.Marker({
+                position: broenshoej,
+                title: "Brønshøj",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow7 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<p>Brønshøj Kirke</p>"
+
+            });
+
+            markerBroenshoej.addListener("click", () => {
+                infowindow7.open(map, markerBroenshoej);
+            });
+
+
+
+
+            //-------------------
+
+
+            let markerBroendby = new google.maps.Marker({
+                position: broendby,
+                title: "Brøndby",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow8 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/broendby.jpg' /><h1>Brøndby Kirke</h1>"
+
+            });
+
+            markerBroendby.addListener("click", () => {
+                infowindow8.open(map, markerBroendby);
+            });
+
+
+
+            //-------------------
+
+
+            let markerHospiceskive = new google.maps.Marker({
+                position: hospiceskive,
+                title: "Hospice Skive",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow9 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/skive.jpg' /><h1>Hospice Skive</h1>"
+
+            });
+
+            markerHospiceskive.addListener("click", () => {
+                infowindow9.open(map, markerHospiceskive);
+            });
+
+            //------
+
+
+            let markerHavdrupkirke = new google.maps.Marker({
+                position: havdrupkirke,
+                title: "Havdrup Kirke",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow10 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/skive.jpg' /><p>Havdrup Kirke</p>"
+
+            });
+
+            markerHavdrupkirke.addListener("click", () => {
+                infowindow10.open(map, markerHavdrupkirke);
+            });
+
+            //------
+
+
+
+
+            let markerKapernaum = new google.maps.Marker({
+                position: kapernaum,
+                title: "Kapernaum Kirke",
+                icon: "",
+                map: map
+            });
+
+            //INFO-BOX
+            let infowindow11 = new google.maps.InfoWindow({
+                maxWidth: 300,
+                content: "<img src='gittekirker/havdrup.jpg' /><p>Havdrup Kirke</p>"
+
+            });
+
+            markerKapernaum.addListener("click", () => {
+                infowindow11.open(map, markerKapernaum);
+            });
+
+
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTy-uno_2xyJNOqmMbw72g6gwcN-wxg8&callback=initMap" async defer></script>
+
+
 </body>
 
 <style>
@@ -120,23 +473,6 @@
     }
 
     /*  Tekst  */
-
-    h1 {
-        color: white;
-    }
-
-    h2 {
-        color: white;
-    }
-
-    p {
-        color: white;
-    }
-
-    a {
-        color: white;
-    }
-
 
     /*    header    */
 
