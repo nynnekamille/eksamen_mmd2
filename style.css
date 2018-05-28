@@ -83,7 +83,7 @@ img {
 
 /*    Nav header */
 
-#nav_kurv{
+#nav_kurv {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "menu logo kurv";
@@ -100,26 +100,26 @@ img {
 }
 
 
-    #nav_some{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "menu logo face insta";
-    }
+#nav_some {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "menu logo face insta";
+}
 
-    #logo{
-        background-color: gray;
-        grid-area: logo;
-    }
+#logo {
+    background-color: gray;
+    grid-area: logo;
+}
 
-    .facebook_logo{
-        background-color: #47505b;
-        grid-area: face;
-    }
+.facebook_logo {
+    background-color: #47505b;
+    grid-area: face;
+}
 
-    .instagram_logo{
-        background-color: #696969;
-        grid-area: insta
-    }
+.instagram_logo {
+    background-color: #696969;
+    grid-area: insta
+}
 
 
 
@@ -150,7 +150,7 @@ img {
     top: 20px;
     left: 30px;
 
-    z-index: 1;
+    z-index: 4;
 
     -webkit-user-select: none;
     user-select: none;
@@ -172,7 +172,7 @@ img {
     cursor: pointer;
 
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
 
 }
 
@@ -187,7 +187,7 @@ img {
     background: #334151;
     border-radius: 10px;
 
-    z-index: 1;
+    z-index: 4;
 
     transform-origin: 4px 0px;
 
@@ -261,66 +261,77 @@ img {
 
 /* Style til om.html*/
 
+#knapper {
+    display: grid;
+}
 
-    #knapper {
-        display: grid;
-    }
-
-    button {
-        background-color: #B4A1A0
-    }
+button {
+    background-color: #B4A1A0
+}
+<<<<<<< HEAD
 
 
-    /*    Infografik     */
+/*    Infografik     */
 
-    #info_grafik {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-area: "infografik";
-        background-color: #47505B
-    }
+#info_grafik {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "infografik";
+    background-color: #47505B
+}
 
-    /*    lav id eller class til infografik og giv den grid-area "infografik"*/
+/*    lav id eller class til infografik og giv den grid-area "infografik"*/
 
-    /*    Holdet     */
+/*    Holdet     */
 
-    #holdet {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "tekst billede";
-        background-color: rgb(185, 184, 180);
-    }
+#holdet {
+    background-image: url(holdet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
-    #tekst_hold {
-        grid-area: tekst;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tekst tekst";
+=======
 
-    }
 
-    #billede_hold {
-        grid-area: billede;
-        background-color: #ffffff
-    }
+/*    Infografik     */
 
-    /*  Sektion samarbejdspartnere */
+#info_grafik {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "infografik";
+    background-color: #47505B
+}
 
-    #samarbejde {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "billede tekst";
-        background-color: #D0D0D0;
-    }
+/*    lav id eller class til infografik og giv den grid-area "infografik"*/
 
-    #billede_samarbejde {
-        grid-area: billede;
-        background-color: rgba(208, 208, 208, 0.54);
-    }
+/*    Holdet     */
 
-    #tekst_samarbejde {
-        grid-area: tekst;
-    }
+#holdet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tekst billede";
+>>>>>>> origin/master
+    background-color: rgb(185, 184, 180);
+}
 
+#tekst_hold {
+    grid-area: tekst;
+
+}
+
+#billede_hold {
+    grid-area: billede;
+    background-color: #ffffff
+}
+
+/*  Sektion samarbejdspartnere */
+
+<<<<<<< HEAD
 /* foooooooooteeeeeeeeer */
 
 footer {
@@ -339,4 +350,21 @@ footer {
 
 .adresse {
     grid-area: adresse;
+=======
+#samarbejde {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "billede tekst";
+    background-color: #D0D0D0;
+}
+
+#billede_samarbejde {
+    grid-area: billede;
+    background-color: rgba(208, 208, 208, 0.54);
+}
+
+#tekst_samarbejde {
+    grid-area: tekst;
+>>>>>>> origin/master
 }
