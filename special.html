@@ -51,13 +51,13 @@
         <div id="kurv"></div>
     </a>
     <h2>Unika-design</h2>
-    <section>
+    <section class="liste">
 
     </section>
 
     <template>
 
-    <article>
+    <article class="special">
             <h3 data-header></h3>
             <img data-image src="" alt="">
     </article>
@@ -128,26 +128,28 @@
 
 
 <style>
-/*    Nav header */
-    nav{
+    /*    Nav header */
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "menu logo kurv";
     }
 
-    #logo{
+    #logo {
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv{
+    #kurv {
         background-color: #47505b;
         grid-area: kurv;
     }
 
 
 
-/*    Menu  */
+    /*    Menu  */
+
     #menu a {
         text-decoration: none;
         color: black;
