@@ -268,7 +268,7 @@ img {
 button {
     background-color: #B4A1A0
 }
-<<<<<<< HEAD
+
 
 
 /*    Infografik     */
@@ -294,28 +294,7 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "tekst tekst";
-=======
 
-
-/*    Infografik     */
-
-#info_grafik {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-area: "infografik";
-    background-color: #47505B
-}
-
-/*    lav id eller class til infografik og giv den grid-area "infografik"*/
-
-/*    Holdet     */
-
-#holdet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "tekst billede";
->>>>>>> origin/master
     background-color: rgb(185, 184, 180);
 }
 
@@ -331,7 +310,7 @@ button {
 
 /*  Sektion samarbejdspartnere */
 
-<<<<<<< HEAD
+
 /* foooooooooteeeeeeeeer */
 
 footer {
@@ -350,7 +329,9 @@ footer {
 
 .adresse {
     grid-area: adresse;
-=======
+
+}
+
 #samarbejde {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -366,5 +347,5 @@ footer {
 
 #tekst_samarbejde {
     grid-area: tekst;
->>>>>>> origin/master
+
 }
