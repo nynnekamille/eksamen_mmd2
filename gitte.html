@@ -4,17 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kvinde Smedien</title>
+    <title>Værker af Gitte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav role="navigation">
         <div id="menuToggle">
+
             <input type="checkbox" />
+
             <span class="first"></span>
             <span></span>
             <span></span>
+
             <ul id="menu">
                 <a href="index.html">
                     <li>
@@ -26,35 +29,38 @@
                         <h2>Webshop</h2>
                     </li>
                 </a>
+
                 <a href="special.html">
                     <li>
                         <h2>Specialbestillinger</h2>
                     </li>
                 </a>
+
                 <a href="om.html">
                     <li>
                         <h2>Vores historie</h2>
                     </li>
                 </a>
+
             </ul>
         </div>
         <div id="logo">
             <p>Logo</p>
         </div>
-        <div id="kurv">
-            <p>Kurv</p>
-        </div>
+
+        <div class="facebook_logo"><a href="facebook.dk">Facebook ikon  </a></div>
+
+
+
+        <div class="instagram_logo"><a href="instagram.com">Insta ikon </a></div>
+
+
+
     </nav>
 
-    <a href="forside.html">
-        <div id="logo" class=""></div>
-    </a>
 
-    <a href="kurv.html">
-        <div id="kurv"></div>
-    </a>
+    <h1> Værker af Gitte</h1>
 
-    <h2 data-header></h2>
 
     <template>
         <article>
@@ -64,102 +70,47 @@
     </template>
 
 
-    <section class="liste">
+    <section>
     </section>
 
 
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams);
-        let urlKategori = urlParams.get("kategori");
-        console.log(urlKategori);
-
-        if (urlKategori == 2) {
-            document.querySelector("[data-header]").textContent = "Borde";
-        }
-
-        if (urlKategori == 10) {
-            document.querySelector("[data-header]").textContent = "Skulpturer";
-        }
-
-        if (urlKategori == 3) {
-            document.querySelector("[data-header]").textContent = "Lysestager";
-        }
-        if (urlKategori == 5) {
-            document.querySelector("[data-header]").textContent = "Bordunderstel";
-        }
-
-        if (urlKategori == 4) {
-            document.querySelector("[data-header]").textContent = "Reoler";
-        }
 
 
-        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
-        let produkter = [];
-        document.addEventListener("DOMContentLoaded", hentJson);
-        let template = document.querySelector("template");
-        let display = document.querySelector("section");
-
-        async function hentJson() {
-            let jsonData = await fetch(jSonUrl);
-            produkter = await jsonData.json();
-            visProdukter();
 
 
-        }
 
-        function visProdukter() {
 
-            produkter.forEach(produkt => {
-
-                let kategori = produkt.categories;
-                console.log(kategori == urlKategori);
-
-                if (kategori == urlKategori) {
-
-                    let klon = template.cloneNode(true).content;
-
-                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
-                    klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
-
-                    klon.querySelector("article").addEventListener("click", () => {
-                        location.href = "singleprodukt.html?id=" + produkt.id;
-                    });
-
-                    display.appendChild(klon);
-                };
-            });
-        }
-    </script>
+    <script></script>
 </body>
 
 </html>
 
-
 <style>
-    /*    Nav / header */
-
-    nav {
+/*    Nav header */
+    nav{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "menu logo kurv";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "menu logo face insta";
     }
 
-    #logo {
+    #logo{
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv {
+    .facebook_logo{
         background-color: #47505b;
-        grid-area: kurv;
+        grid-area: face;
+    }
+
+    .instagram_logo{
+        background-color: #696969;
+        grid-area: insta
     }
 
 
 
-
-
+/*    Menu  */
     #menu a {
         text-decoration: none;
         color: black;

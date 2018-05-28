@@ -124,7 +124,7 @@
 
                     let klon = template.cloneNode(true).content;
 
-                    klon.querySelector("[data-navn]").textContent = produkt.title.rendered;
+                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
