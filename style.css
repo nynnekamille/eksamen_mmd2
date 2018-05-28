@@ -90,8 +90,11 @@ img {
 }
 
 #logo {
-    background-color: gray;
+    background-image: url(img/logo_sort.svg);
     grid-area: logo;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
 }
 
 #kurv {
@@ -104,11 +107,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "menu logo face insta";
-}
-
-#logo {
-    background-color: gray;
-    grid-area: logo;
 }
 
 .facebook_logo {
