@@ -321,4 +321,22 @@ img {
         grid-area: tekst;
     }
 
+/* foooooooooteeeeeeeeer */
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "aabningstider" "kontakt" "adresse";
+}
+
+.aabningstider {
+    grid-area: aabningstider;
+}
+
+.kontakt {
+    grid-area: kontakt;
+}
+
+.adresse {
+    grid-area: adresse;
+}
