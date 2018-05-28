@@ -85,7 +85,7 @@ img {
 
 #nav_kurv {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 4fr 4fr 2fr;
     grid-template-areas: "menu logo kurv";
 }
 
@@ -101,7 +101,7 @@ img {
 }
 
 #kurv {
-    background-color: red;
+    background-color: #B4A1A0;
     grid-area: kurv;
 }
 
@@ -119,8 +119,37 @@ img {
 
 .instagram_logo {
     background-color: #696969;
-    grid-area: insta
+    grid-area: insta;
 }
+
+
+footer {
+    background-color: #47505B;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "adresse aabningstider kontakt";
+}
+
+.adresse {
+    grid-area: adresse;
+}
+
+aabningstider {
+    grid-area: aabningstider;
+}
+
+kontak {
+    grid-area: kontakt;
+}
+
+footer p {
+    color: white;
+}
+
+footer h2 {
+    color: white;
+}
+
 
 
 
@@ -266,7 +295,7 @@ img {
 }
 
 button {
-    background-color: #B4A1A0
+    background-color: #B4A1A0;
 }
 
 
@@ -277,7 +306,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-area: "infografik";
-    background-color: #47505B
+    background-color: #47505B;
 }
 
 /*    lav id eller class til infografik og giv den grid-area "infografik"*/
@@ -303,7 +332,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-area: "infografik";
-    background-color: #47505B
+    background-color: #47505B;
 }
 
 /*    lav id eller class til infografik og giv den grid-area "infografik"*/
@@ -325,7 +354,7 @@ button {
 
 #billede_hold {
     grid-area: billede;
-    background-color: #ffffff
+    background-color: #ffffff;
 }
 
 /*  Sektion samarbejdspartnere */
