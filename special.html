@@ -89,27 +89,26 @@
 
                     let klon = template.cloneNode(true).content;
 
-                    if (urlKategori == 11) {
-            document.querySelector("[data-header]").textContent = "Dørpartier";
-        }
+                    if (produktKategori == 11) {
+                        klon.querySelector("[data-header]").textContent = "Dørpartier";
+                    }
 
-        if (urlKategori == 16) {
-            document.querySelector("[data-header]").textContent = "Skulpturer";
-        }
+                    if (produktKategori == 16) {
+                        klon.querySelector("[data-header]").textContent = "Skulpturer";
+                    }
 
-        if (urlKategori == 37) {
-            document.querySelector("[data-header]").textContent = "Awards";
-        }
+                    if (produktKategori == 37) {
+                        klon.querySelector("[data-header]").textContent = "Awards";
+                    }
 
-        if (urlKategori == 13) {
-            document.querySelector("[data-header]").textContent = "Køkkener";
-        }
+                    if (produktKategori == 13) {
+                        klon.querySelector("[data-header]").textContent = "Køkkener";
+                    }
 
-        if (urlKategori == 12) {
-            document.querySelector("[data-header]").textContent = "Lystræer og Lysglober";
-        }
+                    if (produktKategori == 12) {
+                        klon.querySelector("[data-header]").textContent = "Lystræer og Lysglober";
+                    }
 
-                    klon.querySelector("[data-header]").textContent = kategori.acf.navn;
                     klon.querySelector("[data-image]").src = kategori.acf.billede.url;
                     klon.querySelector("[data-image]").alt = kategori.acf.beskrivelse_af_billede;
 
