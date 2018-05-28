@@ -150,7 +150,7 @@ img {
     top: 20px;
     left: 30px;
 
-    z-index: 1;
+    z-index: 4;
 
     -webkit-user-select: none;
     user-select: none;
@@ -172,7 +172,7 @@ img {
     cursor: pointer;
 
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
 
 }
 
@@ -187,7 +187,7 @@ img {
     background: #334151;
     border-radius: 10px;
 
-    z-index: 1;
+    z-index: 4;
 
     transform-origin: 4px 0px;
 
@@ -268,6 +268,7 @@ img {
 button {
     background-color: #B4A1A0
 }
+<<<<<<< HEAD
 
 
 /*    Infografik     */
@@ -293,6 +294,28 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "tekst tekst";
+=======
+
+
+/*    Infografik     */
+
+#info_grafik {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "infografik";
+    background-color: #47505B
+}
+
+/*    lav id eller class til infografik og giv den grid-area "infografik"*/
+
+/*    Holdet     */
+
+#holdet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tekst billede";
+>>>>>>> origin/master
     background-color: rgb(185, 184, 180);
 }
 
