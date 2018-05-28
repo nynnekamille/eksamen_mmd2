@@ -127,15 +127,15 @@ img {
 
 #menu a {
     text-decoration: none;
-    color: black;
+    color: #070004;
     display: block;
     vertical-align: middle;
-    font-family: grotesk;
+    font-family: ralewayLight;
     transition: color 0.3s ease;
 }
 
 #menu a:hover {
-    color: #f4912d;
+    color: #b4a1a0;
 }
 
 #menuToggle {
@@ -154,9 +154,9 @@ img {
 
     -webkit-user-select: none;
     user-select: none;
-    background-color: #F5F0E4;
+    background-color: #d0d0d0;
     border: 2px;
-    border-color: #334151;
+    border-color: #070004;
     border-style: solid;
     border-radius: 50%;
 }
@@ -184,7 +184,7 @@ img {
     margin-bottom: 5px;
     position: relative;
 
-    background: #334151;
+    background: #070004;
     border-radius: 10px;
 
     z-index: 4;
@@ -212,7 +212,7 @@ img {
 #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #282f43;
+    background: #070004;
 }
 
 
@@ -234,7 +234,7 @@ img {
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    background: #FBFAF2;
+    background: #d0d0d0;
     list-style-type: none;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
