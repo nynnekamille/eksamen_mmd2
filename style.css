@@ -89,6 +89,9 @@ img {
     grid-template-areas: "menu logo kurv";
 }
 
+
+/*-jeg kan ikke se #nav-kurv nogle steder---*/
+
 #logo {
     background-image: url(img/logo_sort.svg);
     grid-area: logo;
@@ -98,14 +101,14 @@ img {
 }
 
 #kurv {
-    background-color: #47505b;
+    background-color: red;
     grid-area: kurv;
 }
 
 
 #nav_some {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 8fr 8fr 1fr 1fr;
     grid-template-areas: "menu logo face insta";
 }
 
@@ -282,14 +285,14 @@ button {
 /*    Holdet     */
 
 #holdet {
-    background-image: url(holdet.jpg);
+    background-image: url(img/ombaggrund.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst tekst";
+    grid-template-areas: "tekst ";
 }
 
 
@@ -307,13 +310,13 @@ button {
 
 /*    Holdet     */
 
-#holdet {
+/*#holdet {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst billede";
+    grid-template-areas: "tekst";
     background-color: rgb(185, 184, 180);
-}
+}*/
 
 #tekst_hold {
     grid-area: tekst;
