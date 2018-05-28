@@ -3,6 +3,7 @@ body {
     text-align: center;
 }
 
+
 p {
     font-family: ralewayLight;
     font-size: 0.8em;
@@ -28,6 +29,11 @@ img {
     max-width: 100%;
 }
 
+
+.liste {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 /*----Text Typer---*/
 

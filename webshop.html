@@ -9,48 +9,49 @@
 </head>
 
 <body>
-<nav role="navigation">
-    <div id="menuToggle">
+    <nav role="navigation">
+        <div id="menuToggle">
 
-        <input type="checkbox" />
+            <input type="checkbox" />
 
-        <span class="first"></span>
-        <span></span>
-        <span></span>
+            <span class="first"></span>
+            <span></span>
+            <span></span>
 
-        <ul id="menu">
-            <a href="index.html">
-                <li>
-                    <h2>Forside</h2>
-                </li>
-            </a>
-            <a href="webshop.html">
-                <li>
-                    <h2>Webshop</h2>
-                </li>
-            </a>
+            <ul id="menu">
+                <a href="index.html">
+                    <li>
+                        <h2>Forside</h2>
+                    </li>
+                </a>
+                <a href="webshop.html">
+                    <li>
+                        <h2>Webshop</h2>
+                    </li>
+                </a>
 
-            <a href="special.html">
-                <li>
-                    <h2>Specialbestillinger</h2>
-                </li>
-            </a>
+                <a href="special.html">
+                    <li>
+                        <h2>Specialbestillinger</h2>
+                    </li>
+                </a>
 
-            <a href="om.html">
-                <li>
-                    <h2>Vores historie</h2>
-                </li>
-            </a>
+                <a href="om.html">
+                    <li>
+                        <h2>Vores historie</h2>
+                    </li>
+                </a>
 
-        </ul>
-    </div>
-    <div id="logo">
-        <p>Logo</p>
-    </div>
-    <div id="kurv">
-        <p>Kurv</p>
-    </div>
-</nav>
+            </ul>
+        </div>
+        <div id="logo">
+            <p>Logo</p>
+        </div>
+        <div id="kurv">
+            <p>Kurv</p>
+        </div>
+    </nav>
+
 
     <a href="forside.html">
         <div id="logo" class=""></div>
@@ -59,8 +60,11 @@
     <a href="kurv.html">
         <div id="kurv"></div>
     </a>
+
+
     <h1>Webshop</h1>
-    <section>
+
+    <section class="liste">
 
     </section>
 
@@ -134,26 +138,28 @@
 
 
 <style>
-/*    Nav header */
-    nav{
+    /*    Nav header */
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "menu logo kurv";
     }
 
-    #logo{
+    #logo {
         background-color: gray;
         grid-area: logo;
     }
 
-    #kurv{
+    #kurv {
         background-color: #47505b;
         grid-area: kurv;
     }
 
 
 
-/*    Menu  */
+    /*    Menu  */
+
     #menu a {
         text-decoration: none;
         color: black;
