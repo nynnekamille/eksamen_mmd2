@@ -89,6 +89,10 @@
             document.querySelector("[data-header]").textContent = "Bordunderstel";
         }
 
+        if (urlKategori == 4) {
+            document.querySelector("[data-header]").textContent = "Reoler";
+        }
+
 
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
         let produkter = [];
@@ -115,7 +119,7 @@
 
                     let klon = template.cloneNode(true).content;
 
-                    klon.querySelector("[data-navn]").textContent = produkt.title.rendered;
+                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
                     klon.querySelector("[data-image]").src = produkt.acf.billede.url;
                     klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
