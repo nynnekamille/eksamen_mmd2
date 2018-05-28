@@ -239,7 +239,6 @@ img {
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
 
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
@@ -289,12 +288,32 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tekst tekst";
+}
 
+
+
+/*    Infografik     */
+
+#info_grafik {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "infografik";
+    background-color: #47505B
+}
+
+/*    lav id eller class til infografik og giv den grid-area "infografik"*/
+
+/*    Holdet     */
+
+#holdet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst tekst";
-
+    grid-template-areas: "tekst billede";
     background-color: rgb(185, 184, 180);
 }
 
@@ -309,28 +328,6 @@ button {
 }
 
 /*  Sektion samarbejdspartnere */
-
-
-/* foooooooooteeeeeeeeer */
-
-footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "aabningstider" "kontakt" "adresse";
-}
-
-.aabningstider {
-    grid-area: aabningstider;
-}
-
-.kontakt {
-    grid-area: kontakt;
-}
-
-.adresse {
-    grid-area: adresse;
-
-}
 
 #samarbejde {
     display: grid;
@@ -347,5 +344,4 @@ footer {
 
 #tekst_samarbejde {
     grid-area: tekst;
-
 }
