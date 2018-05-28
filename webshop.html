@@ -60,18 +60,23 @@
     <a href="kurv.html">
         <div id="kurv"></div>
     </a>
+<<<<<<< HEAD
 
 
     <h1>Webshop</h1>
 
     <section class="liste">
+=======
+    <h2>Webshop</h2>
+    <section>
+>>>>>>> origin/master
 
     </section>
 
     <template>
 
     <article>
-            <h2 data-header></h2>
+            <h3 data-header></h3>
             <img data-image src="" alt="">
     </article>
 
@@ -115,8 +120,13 @@
                     if (produktKategori == 3) {
                         klon.querySelector("[data-header]").textContent = "Lysestager";
                     }
+
                     if (produktKategori == 5) {
                         klon.querySelector("[data-header]").textContent = "Bordunderstel";
+                    }
+
+                    if (produktKategori == 4) {
+                        klon.querySelector("[data-header]").textContent = "Reoler";
                     }
 
                     klon.querySelector("[data-image]").src = kategori.acf.billede.url;
