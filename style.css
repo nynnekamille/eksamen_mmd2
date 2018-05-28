@@ -1,6 +1,7 @@
 body {
     background-color: #B9B8B4;
     text-align: center;
+    overflow-x: hidden;
 }
 
 
@@ -122,6 +123,7 @@ img {
     grid-area: insta;
 }
 
+/*------ FOOTER FOOTER FOOTER ------*/
 
 footer {
     background-color: #47505B;
@@ -349,6 +351,8 @@ button {
 
 #tekst_hold {
     grid-area: tekst;
+    background-color: rgba(208, 208, 208, 0.54);
+
 
 }
 
@@ -360,18 +364,25 @@ button {
 /*  Sektion samarbejdspartnere */
 
 #samarbejde {
+    background-image: url(img/prismadhus.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "billede tekst";
-    background-color: #D0D0D0;
+    grid-template-areas: "billede billede tekst";
 }
 
+
+
+
 #billede_samarbejde {
-    grid-area: billede;
     background-color: rgba(208, 208, 208, 0.54);
 }
 
 #tekst_samarbejde {
     grid-area: tekst;
+    background-color: rgba(208, 208, 208, 0.54);
+
 }
