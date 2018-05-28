@@ -48,9 +48,7 @@
         <div id="logo">
             <p>Logo</p>
         </div>
-        <div id="kurv">
-            <p>Kurv</p>
-        </div>
+
     </nav>
 
     <a href="forside.html">
@@ -80,6 +78,26 @@
         console.log(urlParams);
         let urlKategori = urlParams.get("kategori");
         console.log(urlKategori);
+
+        if (urlKategori == 11) {
+            document.querySelector("[data-header]").textContent = "Dørpartier";
+        }
+
+        if (urlKategori == 16) {
+            document.querySelector("[data-header]").textContent = "Skulpturer";
+        }
+
+        if (urlKategori == 37) {
+            document.querySelector("[data-header]").textContent = "Awards";
+        }
+
+        if (urlKategori == 13) {
+            document.querySelector("[data-header]").textContent = "Køkkener";
+        }
+
+        if (urlKategori == 12) {
+            document.querySelector("[data-header]").textContent = "Lystræer og Lysglober";
+        }
 
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/special";
         let produkter = [];
