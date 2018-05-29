@@ -391,7 +391,7 @@ button {
 /* ---INPUT BESTILLING.HTML--- */
 
 input {
-    width: 80%;
+    width: 60%;
     height: 2vw;
 
 }
@@ -422,3 +422,5 @@ input[type=textarea] {
     background: #47505b;
     color: black;
 }
+
+/* ---INPUT BESTILLING.HTML--- */
