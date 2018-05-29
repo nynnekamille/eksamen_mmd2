@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #pause {
+            width: 100px;
+            font-size: 5px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #pause:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<nav role="navigation" id="nav_some">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span class="first"></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <a href="index.html">
+                <li>
+                    <h2>Forside</h2>
+                </li>
+            </a>
+            <a href="webshop.html">
+                <li>
+                    <h2>Webshop</h2>
+                </li>
+            </a>
+            <a href="special.html">
+                <li>
+                    <h2>Specialbestillinger</h2>
+                </li>
+            </a>
+            <a href="om.html">
+                <li>
+                    <h2>Vores historie</h2>
+                </li>
+            </a>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+  <source src="video/bgtest.MOV" type="video/mp4">
+</video>
+
+
+    <div class="content">
+
+        <h1>Bestil</h1>
+        <p>Vi vil meget gerne udvikle dine ideer. Hvis du udfylder informationer i feltet, kan vi begynde samarbejdet</p>
+
+        <form action="bestilling.php" method="post">
+            <p>Navn</p> <input name="name" type="text" placeholder="Hvad er dit navn?" required><br>
+            <p> Mail</p><input name="email" type="email" placeholder="Hvad er din mail?" required><br>
+            <p> Telefonnummer</p> <input name="phone" type="text" placeholder="Hvordan kan vi få fat på dig?" required><br>
+
+            <p>Hvad er din ide?</p>
+            <input name="description" type="textarea" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
+            <p> Mål:</p>
+            <input name="measurements" type="text"><br>
+            <p>Ønske til materialer:</p>
+            <input type="text" name="materials"><br>
+            <input type="submit" class="signupbtn">
+
+        </form>
+
+        <div class="clearfix">
+
+            <p>Ved at blive medlem af vores nyhed melder du dig enig i vores termer angående <a href="#" style="color:dodgerblue">Vilkår og Privatliv</a>.</p>
+
+
+
+
+        </div>
+
+        <p>Vi vender tilbage med dig hurtigst muligt.</p>
+
+        <button id="pause" onclick="myFunction()">Pause Filmen</button>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

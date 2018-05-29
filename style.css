@@ -54,7 +54,7 @@ img {
     text-align: center;
     width: 50%;
     left: 20%;
-    background-color: aqua;
+    background-color: #B4A1A0;
     height: 15%;
     border-radius: 0%;
 }
@@ -317,14 +317,14 @@ button {
 /*    Holdet     */
 
 #holdet {
-    background-image: url(img/ombaggrund.jpg);
+    background-image: url(img/omholdet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst ";
+    grid-template-areas: "tekst tekst billede";
 }
 
 
@@ -387,3 +387,41 @@ button {
     background-color: rgba(208, 208, 208, 0.54);
 
 }
+
+
+/* ---INPUT BESTILLING.HTML--- */
+
+input {
+    width: 60%;
+    height: 2vw;
+
+}
+
+.content {
+    color: white;
+}
+
+input[type=text]:focus {
+    border: 3px solid red;
+}
+
+input[type=textarea] {
+    height: 5vw;
+}
+
+.signupbtn {
+    width: 200px;
+    height: 50px;
+    font-size: 10px;
+    padding: 2px;
+    background: #B4A1A0;
+    color: white;
+    cursor: pointer;
+}
+
+.signupbtn :hover {
+    background: #47505b;
+    color: black;
+}
+
+/* ---INPUT BESTILLING.HTML--- */

@@ -39,6 +39,12 @@
                         <h2>Vores historie</h2>
                     </li>
                 </a>
+
+                <a href="bestil.html">
+                    <li>
+                        <h2>Send os din bestilling</h2>
+                    </li>
+                </a>
             </ul>
         </div>
         <div id="logo"> </div>
@@ -70,6 +76,8 @@
         <div id="tekst_hold">
             <h2>Holdet</h2>
             <p>Her skriver vi noget om samarbejdspartnere. Lorem ipsum dolor sit amet, venenatis nibh gravida eros id faucibus, tortor lectus pretium egestas erat at, ipsum donec dolor porttitor orci maecenas quis, proin lobortis urna sagittis elit egestas. Sed velit id euismod nulla ac vel, morbi parturient vestibulum fringilla aliquet urna tincidunt, eros nonummy enim sollicitudin integer urna, felis suspendisse dolor eu nec eget, blandit congue donec fusce malesuada dictum malesuada. Euismod faucibus auctor vulputate vestibulum iaculis, repellat hendrerit aliquet venenatis a blandit, bibendum duis diam orci sapien hymenaeos donec, magnis turpis sed arcu purus amet tellus, at in vivamus in augue curabitur. Dui mi eget mollis auctor nullam, phasellus turpis sed aliquam nisl porta suspendisse, nulla vivamus cum diam ac at. Posuere aut nulla in sollicitudin lorem, sapien pellentesque placerat integer hendrerit in aliquam, non nibh wisi aenean imperdiet iaculis. Wisi risus arcu feugiat imperdiet neque, nam mollis nunc amet donec aliquid ornare, luctus velit quis ac amet ante commodo. Nullam risus at porttitor sociis necessitatibus ac, justo neque rutrum ligula pretium non, litora rhoncus lacinia non convallis ut praesent. Tellus cras sit pulvinar eros quisque, fuga integer rhoncus arcu aenean leo lacinia, turpis curabitur sollicitudin elit magna lorem massa, ut proin est vel dignissim et, praesent tempus vestibulum tincidunt hac ac quam.
+            </p>
+        </div>
     </section>
     <section id="værker">
 
@@ -233,6 +241,11 @@
             markerMariaKirken.addListener("click", () => {
                 infowindow1.open(map, markerMariaKirken);
             });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow1.close();
+            });
+
+
 
             //-----------------------
 
@@ -254,6 +267,11 @@
                 infowindow2.open(map, markerHerfoelgeKirke);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow2.close();
+            });
+
+
 
             //JESUSKIRKEN----------------------------
             let markerJesus = new google.maps.Marker({
@@ -274,6 +292,9 @@
                 infowindow3.open(map, markerJesus);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow3.close();
+            });
 
 
 
@@ -298,6 +319,10 @@
                 infowindow4.open(map, markerFrelser);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow4.close();
+            });
+
 
 
 
@@ -313,7 +338,7 @@
             //INFO-BOX
             let infowindow5 = new google.maps.InfoWindow({
                 maxWidth: 400,
-                content: "<img src='gittekirker/markus.jpg' /><p>Google Earth</p><a href='www.google.com' /></a><h2>Sankt Markus Kirke</h2><p>Teglværksalle 17<br>9000 Aalborg<br>Tlf. 98126052</p><br><p>Hertil har Gitte udviklet lysestager og interiør</p>"
+                content: "<img src='gittekirker/markus.jpg' /><p><a href='www.google.com' />Google Earth</a></p><h2>Sankt Markus Kirke</h2><p>Teglværksalle 17<br>9000 Aalborg<br>Tlf. 98126052</p><br><p>Hertil har Gitte udviklet lysestager og interiør</p>"
 
 
 
@@ -322,7 +347,9 @@
             markerMarkus.addListener("click", () => {
                 infowindow5.open(map, markerMarkus);
             });
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow5.close();
+            });
 
 
 
@@ -347,7 +374,9 @@
                 infowindow6.open(map, markerRingsted);
             });
 
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow6.close();
+            });
 
 
             //-------------------
@@ -371,7 +400,9 @@
             });
 
 
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow7.close();
+            });
 
             //-------------------
 
@@ -394,6 +425,9 @@
                 infowindow8.open(map, markerBroendby);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow8.close();
+            });
 
 
             //-------------------
@@ -416,6 +450,9 @@
             markerHospiceskive.addListener("click", () => {
                 infowindow9.open(map, markerHospiceskive);
             });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow9.close();
+            });
 
             //------
 
@@ -436,6 +473,9 @@
 
             markerHavdrupkirke.addListener("click", () => {
                 infowindow10.open(map, markerHavdrupkirke);
+            });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow10.close();
             });
 
             //------
@@ -460,11 +500,11 @@
             markerKapernaum.addListener("click", () => {
                 infowindow11.open(map, markerKapernaum);
             });
-
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow11.close();
+            });
 
         }
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTy-uno_2xyJNOqmMbw72g6gwcN-wxg8&callback=initMap" async defer></script>
 
