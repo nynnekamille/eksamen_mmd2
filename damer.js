@@ -4,12 +4,12 @@
      console.log("start");
 
 
-     $("#infoboxDitte").hide();
+     $("#infoboxDorthe").hide();
      $("#infoboxGitte").hide();
      $("#infoboxCharlotte").hide();
 
      $("#gitte").on("click", visGitte);
-     $("#ditte").on("click", visDitte);
+     $("#dorthe").on("click", visDorthe);
      $("#charlotte").on("click", visCharlotte);
  }
 
@@ -17,27 +17,27 @@
      console.log("visGitte");
 
      $("#infoboxGitte").show();
-     $("#infoboxDitte").hide();
+     $("#infoboxDorthe").hide();
      $("#infoboxCharlotte").hide();
 
      $("#infoboxGitte").on("click", hide);
  }
 
- function visDitte() {
-     console.log("visDitte");
+ function visDorthe() {
+     console.log("visDorthe");
 
-     $("#infoboxDitte").show();
+     $("#infoboxDorthe").show();
 
      $("#infoboxGitte").hide();
      $("#infoboxCharlotte").hide();
-     $("#infoboxDitte").on("click", hide);
+     $("#infoboxDorthe").on("click", hide);
  }
 
  function visCharlotte() {
      console.log("visCharlotte");
 
      $("#infoboxCharlotte").show();
-     $("#infoboxDitte").hide();
+     $("#infoboxDorthe").hide();
      $("#infoboxGitte").hide();
      $("#infoboxCharlotte").on("click", hide);
 
@@ -46,7 +46,7 @@
  function hide() {
      console.log("hide");
      $("#infoboxCharlotte").hide();
-     $("#infoboxDitte").hide();
+     $("#infoboxDorthe").hide();
      $("#infoboxGitte").hide();
 
  }
