@@ -54,7 +54,7 @@ img {
     text-align: center;
     width: 50%;
     left: 20%;
-    background-color: aqua;
+    background-color: #B4A1A0;
     height: 15%;
     border-radius: 0%;
 }
@@ -385,4 +385,40 @@ button {
     grid-area: tekst;
     background-color: rgba(208, 208, 208, 0.54);
 
+}
+
+
+/* ---INPUT BESTILLING.HTML--- */
+
+input {
+    width: 80%;
+    height: 2vw;
+
+}
+
+.content {
+    color: white;
+}
+
+input[type=text]:focus {
+    border: 3px solid red;
+}
+
+input[type=textarea] {
+    height: 5vw;
+}
+
+.signupbtn {
+    width: 200px;
+    height: 50px;
+    font-size: 10px;
+    padding: 2px;
+    background: #B4A1A0;
+    color: white;
+    cursor: pointer;
+}
+
+.signupbtn :hover {
+    background: #47505b;
+    color: black;
 }

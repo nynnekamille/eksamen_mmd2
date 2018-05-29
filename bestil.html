@@ -22,8 +22,8 @@
         }
 
         #pause {
-            width: 200px;
-            font-size: 18px;
+            width: 100px;
+            font-size: 5px;
             padding: 10px;
             border: none;
             background: #000;
@@ -67,17 +67,6 @@
             </a>
         </ul>
     </div>
-    <div id="logo">
-
-    </div>
-
-    <div class="facebook_logo"><a href="facebook.dk">Facebook ikon  </a></div>
-
-
-
-    <div class="instagram_logo"><a href="instagram.com">Insta ikon </a></div>
-
-
 </nav>
 
 <body>
@@ -93,16 +82,16 @@
 
         <form action="bestilling.php" method="post">
             <p>Navn</p> <input name="name" type="text" placeholder="Hvad er dit navn?" required><br>
-            <p> Mail</p><input name="mail" type="text" placeholder="Hvad er din mail?" required><br>
+            <p> Mail</p><input name="email" type="email" placeholder="Hvad er din mail?" required><br>
             <p> Telefonnummer</p> <input name="phone" type="text" placeholder="Hvordan kan vi få fat på dig?" required><br>
 
             <p>Hvad er din ide?</p>
-            <input name="description" type="text" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
+            <input name="description" type="textarea" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
             <p> Mål:</p>
             <input name="measurements" type="text"><br>
-            <p>Materialer:</p>
+            <p>Ønske til materialer:</p>
             <input type="text" name="materials"><br>
-            <p>Angiv informationerne</p> <input type="submit" class="signupbtn">
+            <input type="submit" class="signupbtn">
 
         </form>
 
