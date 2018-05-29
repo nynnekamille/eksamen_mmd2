@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Bestil</h1>
+    <p>Vi vil meget gerne udvikle dine ideer. Hvis du udfylder informationer i feltet, kan vi begynde samarbejdet</p>
+
+    <img src="tirsdag.jpg">
+
+    <form action="bestilling.php" method="post">
+        <p>Navn</p> <input name="name" type="text" placeholder="Hvad er dit navn?" required><br>
+        <p> Mail</p><input name="mail" type="text" placeholder="Hvad er din mail?" required><br>
+        <p> Telefonnummer</p> <input name="phone" type="text" placeholder="Hvordan kan vi få fat på dig?" required><br>
+
+        <p>Hvad er din ide?</p>
+        <input name="description" type="text" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
+        <p> Mål:</p>
+        <input name="measurements" type="text"><br>
+        <p>Materialer:</p>
+        <input type="text" name="materials"><br>
+        <p>Angiv informationerne</p> <input type="submit" class="signupbtn">
+
+    </form>
+
+    <div class="clearfix">
+
+        <p>Ved at blive medlem af vores nyhed melder du dig enig i vores termer angående <a href="#" style="color:dodgerblue">Vilkår og Privatliv</a>.</p>
+
+
+
+    </div>
+
+    <p>Vi vender tilbage med dig hurtigst muligt.</p>
+
+
+</body>
+
+</html>
