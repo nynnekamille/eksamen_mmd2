@@ -316,14 +316,14 @@ button {
 /*    Holdet     */
 
 #holdet {
-    background-image: url(img/ombaggrund.jpg);
+    background-image: url(img/omholdet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst ";
+    grid-template-areas: "tekst tekst billede";
 }
 
 
