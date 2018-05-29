@@ -241,6 +241,11 @@
             markerMariaKirken.addListener("click", () => {
                 infowindow1.open(map, markerMariaKirken);
             });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow1.close();
+            });
+
+
 
             //-----------------------
 
@@ -262,6 +267,11 @@
                 infowindow2.open(map, markerHerfoelgeKirke);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow2.close();
+            });
+
+
 
             //JESUSKIRKEN----------------------------
             let markerJesus = new google.maps.Marker({
@@ -282,6 +292,9 @@
                 infowindow3.open(map, markerJesus);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow3.close();
+            });
 
 
 
@@ -304,6 +317,10 @@
 
             markerFrelser.addListener("click", () => {
                 infowindow4.open(map, markerFrelser);
+            });
+
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow4.close();
             });
 
 
@@ -330,7 +347,9 @@
             markerMarkus.addListener("click", () => {
                 infowindow5.open(map, markerMarkus);
             });
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow5.close();
+            });
 
 
 
@@ -355,7 +374,9 @@
                 infowindow6.open(map, markerRingsted);
             });
 
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow6.close();
+            });
 
 
             //-------------------
@@ -379,7 +400,9 @@
             });
 
 
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow7.close();
+            });
 
             //-------------------
 
@@ -402,6 +425,9 @@
                 infowindow8.open(map, markerBroendby);
             });
 
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow8.close();
+            });
 
 
             //-------------------
@@ -424,6 +450,9 @@
             markerHospiceskive.addListener("click", () => {
                 infowindow9.open(map, markerHospiceskive);
             });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow9.close();
+            });
 
             //------
 
@@ -444,6 +473,9 @@
 
             markerHavdrupkirke.addListener("click", () => {
                 infowindow10.open(map, markerHavdrupkirke);
+            });
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow10.close();
             });
 
             //------
@@ -468,8 +500,9 @@
             markerKapernaum.addListener("click", () => {
                 infowindow11.open(map, markerKapernaum);
             });
-
-
+            google.maps.event.addListener(map, "click", function(event) {
+                infowindow11.close();
+            });
 
         }
     </script>
