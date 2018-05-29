@@ -5,7 +5,7 @@
 $from="";
 $to="theis.hmj@gmail.com";
 $name = $_REQUEST ['name'];
-$mail = $_REQUEST ['mail'];
+$mail = $_REQUEST ['email'];
 $phone = $_POST ['phone'];
 $description = $_POST ['description'];
 $measurements = $_POST ['measurements'];
