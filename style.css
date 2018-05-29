@@ -86,7 +86,7 @@ img {
 
 #nav_kurv {
     display: grid;
-    grid-template-columns: 4fr 4fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "menu logo kurv";
 }
 
@@ -97,8 +97,9 @@ img {
     background-image: url(img/logo_sort.svg);
     grid-area: logo;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
+    justify-self: center;
 }
 
 #kurv {
