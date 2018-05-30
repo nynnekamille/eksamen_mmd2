@@ -128,14 +128,13 @@ img {
 
 
 .facebook_logo {
-    width: 40%;
-    grid-area: 1/8;
-    justify-self: right;
+    width: 35%;
+    grid-area: 1/9;
+    justify-self: left;
     align-self: end;
 }
-
 .instagram_logo {
-    width: 40%;
+    width: 35%;
     grid-area: 1/9;
     justify-self: right;
     align-self: end;
@@ -322,12 +321,14 @@ button {
 
 /*    Infografik     */
 
+/*
 #info_grafik {
     display: grid;
     grid-template-columns: 1fr;
     grid-area: "infografik";
     background-color: #47505B;
 }
+*/
 
 /*    lav id eller class til infografik og giv den grid-area "infografik"*/
 
@@ -339,21 +340,23 @@ button {
     background-size: cover;
     background-attachment: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst tekst billede";
+    grid-template-areas: "tekst tekst billede billede";
 }
 
 
 
 /*    Infografik     */
 
+/*
 #info_grafik {
     display: grid;
     grid-template-columns: 1fr;
     grid-area: "infografik";
     background-color: #47505B;
 }
+*/
 
 /*    lav id eller class til infografik og giv den grid-area "infografik"*/
 
@@ -369,7 +372,7 @@ button {
 
 #tekst_hold {
     grid-area: tekst;
-    background-color: rgba(208, 208, 208, 0.54);
+    background-color: rgba(208, 208, 208, 0.8);
 
 
 }
@@ -401,7 +404,7 @@ button {
 
 #tekst_samarbejde {
     grid-area: tekst;
-    background-color: rgba(208, 208, 208, 0.54);
+    background-color: rgba(208, 208, 208, 0.8);
 
 }
 
@@ -449,6 +452,7 @@ input[type=textarea] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "dorthe charlotte gitte";
+    background-color: rgb(255, 255, 255, 0.5);
 }
 
 
@@ -458,6 +462,7 @@ input[type=textarea] {
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
+    padding-top: 5%
 }
 
 #gitte {
@@ -466,6 +471,7 @@ input[type=textarea] {
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
+    padding-top: 5%
 }
 
 #charlotte {
@@ -474,26 +480,23 @@ input[type=textarea] {
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
+    padding-top: 5%
 }
 
-#infoboxDorthe h1 {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-}
 
 
 
 
 
 #infoboxGitte {
-    background-color: #B4A1A0;
+    background-color: #B9B8B4;
     height: 400px;
     width: 100%;
     display: none;
 }
 
 #infoboxDorthe {
-    background-color: #58616a;
+    background-color: #B9B8B4;
     height: 400px;
     width: 100%;
     display: none;
@@ -501,7 +504,7 @@ input[type=textarea] {
 
 
 #infoboxCharlotte {
-    background-color: #47505B;
+    background-color: #B9B8B4;
     height: 400px;
     width: 100%;
     display: none;
@@ -562,4 +565,18 @@ input[type=textarea] {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+
+/*KNAPPER TIL INFO OM KUNSTNERE*/
+
+i {
+    border: solid #070004;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
