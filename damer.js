@@ -17,6 +17,7 @@
      console.log("visGitte");
 
      $("#infoboxGitte").show();
+
      $("#infoboxDorthe").hide();
      $("#infoboxCharlotte").hide();
 
@@ -30,6 +31,8 @@
 
      $("#infoboxGitte").hide();
      $("#infoboxCharlotte").hide();
+
+
      $("#infoboxDorthe").on("click", hide);
  }
 
@@ -37,8 +40,10 @@
      console.log("visCharlotte");
 
      $("#infoboxCharlotte").show();
+
      $("#infoboxDorthe").hide();
      $("#infoboxGitte").hide();
+
      $("#infoboxCharlotte").on("click", hide);
 
  }
