@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.2045 128.2045">
+  <title>Asset 2</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect width="128.2045" height="128.2045" fill="#b4a1a0"/>
+      <rect x="21.9309" y="21.016" width="84.3427" height="86.6424" rx="20.9402" ry="20.9402" fill="#fff"/>
+      <rect x="30.9986" y="30.096" width="66.2072" height="68.0125" rx="15.4667" ry="15.4667" fill="#b4a1a0"/>
+      <circle cx="64.1023" cy="64.1023" r="15.6417" fill="#fff" stroke="#b4a1a0" stroke-miterlimit="10"/>
+      <circle cx="86.5015" cy="41.938" r="5.3624" fill="#fcfafc" stroke="#fcfafc" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>
