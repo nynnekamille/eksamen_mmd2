@@ -6,69 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Kvindesmedien</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #damer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0 auto;
-            padding: 3vw 5vw 0vw 5vw;
-
-        }
-
-
-
-        #dorthe {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #infoboxDorthe h1 {
-            color: white;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #gitte {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #charlotte {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #infoboxGitte {
-            background-color: #B4A1A0;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-        #infoboxDorthe {
-            background-color: #58616a;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-
-        #infoboxCharlotte {
-            background-color: #47505B;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-        #damer {
-            margin: 0 auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -110,15 +47,29 @@
                 </a>
             </ul>
         </div>
-        <div id="logo"> </div>
+        <div id="logo_some"> </div>
 
         <div class="facebook_logo"><a href="facebook.dk">Facebook ikon  </a></div>
+
+
 
         <div class="instagram_logo"><a href="instagram.com">Insta ikon </a></div>
     </nav>
 
+    <section id="knapper">
+        <button class="om_knapper"><p>Hop til Samarbejdspartnere</p></button>
+        <button><a href="#maps">
+    <p>Hop til Kirkekort</p>
+</a></button>
 
 
+    </section>
+
+
+
+    <section id="info_grafik">
+        <h1>Infografik</h1>
+    </section>
 
     <section id="holdet">
 
@@ -141,46 +92,6 @@
             <p>Værker af Charlotte</p>
         </a>
     </section>
-
-
-
-
-
-
-
-
-
-
-    <section id="damer">
-
-
-        <div id="dorthe" class=""><img src="img/dorthe.png"></div>
-        <div id="gitte" class=""><img src="img/gitte.png"></div>
-
-        <div id="charlotte" class=""><img src="img/charlotte.png"></div>
-    </section>
-
-    <div id="infoboxDorthe" class="">
-        <h1>Dorthe</h1>
-    </div>
-
-
-
-    <div id="infoboxGitte" class="">
-        <h1>Gitte</h1>
-    </div>
-    <div id="infoboxCharlotte" class="">
-        <h1>Charlotte</h1>
-    </div>
-
-
-
-
-
-
-
-
-
 
     <section id="samarbejde">
         <div id="billede_samarbejde"></div>
@@ -214,8 +125,6 @@
 
 
     <script>
-        ///EARTH///
-
         let map;
 
         let centrum = {
@@ -599,10 +508,6 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTy-uno_2xyJNOqmMbw72g6gwcN-wxg8&callback=initMap" async defer></script>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-
-    <script src="damer.js"></script>
 
 </body>
 
