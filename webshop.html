@@ -92,7 +92,7 @@
 
 
     <script>
-        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop";
+        let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/webshop?per_page=100";
         let kategorier = [];
         let template = document.querySelector("template");
         let display = document.querySelector("section");
@@ -135,6 +135,14 @@
 
                     if (produktKategori == 4) {
                         klon.querySelector("[data-header]").textContent = "Reoler";
+                    }
+
+                    if (produktKategori == 87) {
+                        klon.querySelector("[data-header]").textContent = "Lamper";
+                    }
+
+                    if (produktKategori == 68) {
+                        klon.querySelector("[data-header]").textContent = "Skilte";
                     }
 
                     klon.querySelector("[data-image]").src = kategori.acf.billede.url;
