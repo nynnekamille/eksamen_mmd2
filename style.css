@@ -131,12 +131,14 @@ img {
     width: 40%;
     grid-area: 1/8;
     justify-self: right;
+    align-self: end;
 }
 
 .instagram_logo {
     width: 40%;
     grid-area: 1/9;
     justify-self: right;
+    align-self: end;
 }
 
 /*------ FOOTER FOOTER FOOTER ------*/
