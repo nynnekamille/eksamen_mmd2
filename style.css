@@ -102,14 +102,23 @@ img {
     justify-self: center;
 }
 
+#nav_some {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 #logo_some {
     background-image: url(img/logo_sort.svg);
     grid-area: logo;
     background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
-    grid-area: 4/8;
+    /* width: 100%; */
+    height: 8vw;
+    grid-column-start: 7;
 }
+
+/* grid-column-end: 8; */
+
+/* align-self: stretch; */
 
 #kurv {
     background-color: #B4A1A0;
@@ -117,10 +126,6 @@ img {
 }
 
 
-#nav_some {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
 
 .facebook_logo {
     background-color: #47505b;
