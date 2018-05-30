@@ -7,67 +7,8 @@
     <title>Om Kvindesmedien</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        #damer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0 auto;
-            padding: 3vw 5vw 0vw 5vw;
-
-        }
 
 
-
-        #dorthe {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #infoboxDorthe h1 {
-            color: white;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #gitte {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #charlotte {
-            background-image: url();
-            height: 150px;
-            width: 150px;
-            background-repeat: no-repeat;
-        }
-
-        #infoboxGitte {
-            background-color: #B4A1A0;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-        #infoboxDorthe {
-            background-color: #58616a;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-
-        #infoboxCharlotte {
-            background-color: #47505B;
-            height: 400px;
-            width: 100%;
-            display: none;
-        }
-
-        #damer {
-            margin: 0 auto;
-        }
     </style>
 </head>
 
@@ -128,26 +69,6 @@
             </p>
         </div>
     </section>
-    <section id="værker">
-
-        <h2>Værker</h2>
-        <a href="gitte.html">
-            <p> Værker af Gitte</p>
-        </a><br>
-        <a href="dorte.html">
-            <p>Værker af Dorte</p>
-        </a><br>
-        <a href="charlotte.html">
-            <p>Værker af Charlotte</p>
-        </a>
-    </section>
-
-
-
-
-
-
-
 
 
 
@@ -159,19 +80,20 @@
 
         <div id="charlotte" class=""><img src="img/charlotte.png"></div>
     </section>
+    <section id="infobox">
+        <div id="infoboxDorthe" class="">
+            <h1>Dorthe</h1>
+        </div>
 
-    <div id="infoboxDorthe" class="">
-        <h1>Dorthe</h1>
-    </div>
 
 
-
-    <div id="infoboxGitte" class="">
-        <h1>Gitte</h1>
-    </div>
-    <div id="infoboxCharlotte" class="">
-        <h1>Charlotte</h1>
-    </div>
+        <div id="infoboxGitte" class="">
+            <h1>Charlotte</h1>
+        </div>
+        <div id="infoboxCharlotte" class="">
+            <h1>Gitte</h1>
+        </div>
+    </section>
 
 
 
@@ -596,6 +518,7 @@
             });
 
         }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTy-uno_2xyJNOqmMbw72g6gwcN-wxg8&callback=initMap" async defer></script>
 

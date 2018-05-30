@@ -433,3 +433,67 @@ input[type=textarea] {
 }
 
 /* ---INPUT BESTILLING.HTML--- */
+
+/*DAMER VÆRKER WUHU*/
+
+#damer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "dorthe charlotte gitte";
+}
+
+
+#dorthe {
+    grid-area: dorthe;
+    height: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+
+#gitte {
+    grid-area: charlotte;
+    height: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+
+#charlotte {
+    grid-area: gitte;
+    height: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+
+#infoboxDorthe h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+
+
+#infoboxGitte {
+    background-color: #B4A1A0;
+    height: 400px;
+    width: 100%;
+    display: none;
+}
+
+#infoboxDorthe {
+    background-color: #58616a;
+    height: 400px;
+    width: 100%;
+    display: none;
+}
+
+
+#infoboxCharlotte {
+    background-color: #47505B;
+    height: 400px;
+    width: 100%;
+    display: none;
+}
