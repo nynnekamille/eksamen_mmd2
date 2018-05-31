@@ -89,6 +89,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "menu logo kurv";
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 
@@ -141,6 +142,24 @@ img {
     justify-self: right;
     align-self: end;
     padding-right: 2%
+}
+
+/*INDEX*/
+
+#indledning {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#indledning h1 {
+    grid-area: 1/2/1/2;
+    justify-self: center;
+}
+
+#indledning p {
+    grid-area: 2/2/2/2;
+    justify-self: center;
 }
 
 /*------ FOOTER FOOTER FOOTER ------*/

@@ -11,6 +11,19 @@
             width: 50%;
             height: 10%;
         }
+
+        #myVideoBg {
+            width: 100%;
+            position: absolute;
+            top: -20vw;
+            left: 0%;
+        }
+
+        #bg_video {
+            height: 20vw;
+            position: relative;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -43,11 +56,6 @@
                         <h2>Vores historie</h2>
                     </li>
                 </a>
-                <a href="bestil.html">
-                    <li>
-                        <h2>Send os din bestilling</h2>
-                    </li>
-                </a>
             </ul>
         </div>
         <div id="logo_some"><a href="index.html"><img src="img/logo_sort.svg" alt="logo"></a></div>
@@ -60,13 +68,28 @@
     </nav>
 
 
-    <section id="bg_video"></section>
+    <section id="bg_video">
+        <video autoplay muted loop id="myVideoBg">
+  <source src="video/bg_bor.mp4" type="video/mp4">
+</video>
+    </section>
+    <section id="indledning">
+        <h1>Vi er KVINDESMEDIEN.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. Aliquam elementum imperdiet turpis. In id metus. Mauris eu nisl. Nam pharetra nisi nec enim. Nulla aliquam, tellus sed laoreet blandit, eros urna vehicula lectus, et vulputate mauris arcu ut arcu. Praesent eros metus lirum larum, accumsan a, malesuada et, commodo vel, nulla. Aliquam sagittis auctor sapien. Morbi a nibh.</p>
+
+    </section>
 
     <video autoplay muted loop id="myVideo">
-  <source src="video/explainer4.mp4" type="video/mp4">
+  <source src="video/explainer1.mp4" type="video/mp4">
 </video>
 
-    <section id="stemning"></section>
+    <section id="henvis">
+        <div id="web"></div>
+        <div id="special"></div>
+        <div id="hold"></div>
+
+
+    </section>
 
     <footer>
         <div class="adresse">
