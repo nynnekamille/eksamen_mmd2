@@ -58,7 +58,33 @@
     </nav>
 
 
+    <div class="nynav">
 
+        <a href="index.html">
+            <h2>Forside</h2>
+        </a>
+        <a href="webshop.html">
+
+            <h2>Webshop</h2>
+
+        </a>
+        <a href="special.html">
+
+            <h2>Specialbestillinger</h2>
+
+        </a>
+        <a href="om.html" class="active">
+
+            <h2>Vores historie</h2>
+
+        </a>
+
+        <a href="bestil.html">
+
+            <h2>Send os din bestilling</h2>
+
+        </a>
+    </div>
 
 
 
@@ -157,86 +183,85 @@
 
 
     <script>
-
         let jSonUrl = "http://nynnekamille.com/kea/2.semester/kvindesmedien_eksamen_2sem/wordpress/wp-json/wp/v2/vaerker_af";
-     let produkter = [];
-     document.addEventListener("DOMContentLoaded", hentJson);
+        let produkter = [];
+        document.addEventListener("DOMContentLoaded", hentJson);
 
         let templateDorthe = document.querySelector("#temp_dorthe");
-     let displayDorthe = document.querySelector("#display_dorthe");
+        let displayDorthe = document.querySelector("#display_dorthe");
 
-    let templateCharlotte = document.querySelector("#temp_charlotte");
-     let displayCharlotte = document.querySelector("#display_charlotte");
+        let templateCharlotte = document.querySelector("#temp_charlotte");
+        let displayCharlotte = document.querySelector("#display_charlotte");
 
         let templateGitte = document.querySelector("#temp_gitte");
-     let displayGitte = document.querySelector("#display_gitte");
+        let displayGitte = document.querySelector("#display_gitte");
 
 
-     async function hentJson() {
-         let jsonData = await fetch(jSonUrl);
-         produkter = await jsonData.json();
+        async function hentJson() {
+            let jsonData = await fetch(jSonUrl);
+            produkter = await jsonData.json();
 
-         document.querySelector("#dorthe").addEventListener("click", visDortheBox());
-         document.querySelector("#charlotte").addEventListener("click", visCharlotteBox());
-         document.querySelector("#gitte").addEventListener("click", visGitteBox());
-     }
+            document.querySelector("#dorthe").addEventListener("click", visDortheBox());
+            document.querySelector("#charlotte").addEventListener("click", visCharlotteBox());
+            document.querySelector("#gitte").addEventListener("click", visGitteBox());
+        }
 
-     function visDortheBox() {
+        function visDortheBox() {
 
-         produkter.forEach(produkt => {
+            produkter.forEach(produkt => {
 
-             let kategori = produkt.categories;
+                let kategori = produkt.categories;
 
-             if (kategori == 40) {
-                 console.log(kategori == 40);
-                 let klon = templateDorthe.cloneNode(true).content;
+                if (kategori == 40) {
+                    console.log(kategori == 40);
+                    let klon = templateDorthe.cloneNode(true).content;
 
-                 klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
-                 klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                 klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
+                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
+                    klon.querySelector("[data-image]").src = produkt.acf.billede.url;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
-                 displayDorthe.appendChild(klon);
-             };
-         });
-     }
+                    displayDorthe.appendChild(klon);
+                };
+            });
+        }
 
         function visCharlotteBox() {
 
-         produkter.forEach(produkt => {
+            produkter.forEach(produkt => {
 
-             let kategori = produkt.categories;
+                let kategori = produkt.categories;
 
-             if (kategori == 41) {
-                 console.log(kategori == 41);
-                 let klon = templateCharlotte.cloneNode(true).content;
+                if (kategori == 41) {
+                    console.log(kategori == 41);
+                    let klon = templateCharlotte.cloneNode(true).content;
 
-                 klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
-                 klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                 klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
+                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
+                    klon.querySelector("[data-image]").src = produkt.acf.billede.url;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
-                 displayCharlotte.appendChild(klon);
-             };
-         });
-     }
+                    displayCharlotte.appendChild(klon);
+                };
+            });
+        }
 
         function visGitteBox() {
 
-         produkter.forEach(produkt => {
+            produkter.forEach(produkt => {
 
-             let kategori = produkt.categories;
+                let kategori = produkt.categories;
 
-             if (kategori == 39) {
-                 console.log(kategori == 39);
-                 let klon = templateGitte.cloneNode(true).content;
+                if (kategori == 39) {
+                    console.log(kategori == 39);
+                    let klon = templateGitte.cloneNode(true).content;
 
-                 klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
-                 klon.querySelector("[data-image]").src = produkt.acf.billede.url;
-                 klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
+                    klon.querySelector("[data-navn]").textContent = produkt.acf.navn;
+                    klon.querySelector("[data-image]").src = produkt.acf.billede.url;
+                    klon.querySelector("[data-image]").alt = produkt.acf.beskrivelse_af_billede;
 
-                 displayGitte.appendChild(klon);
-             };
-         });
-     }
+                    displayGitte.appendChild(klon);
+                };
+            });
+        }
 
         let map;
 

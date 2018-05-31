@@ -654,3 +654,31 @@ i {
 .singlep {
     grid-area: 1/2;
 }
+
+
+
+/*---NY MENU NAVIGATION---*/
+
+.nynav {
+    overflow: hidden;
+    background-color: #47505B;
+}
+
+.nynav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nynav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.nynav a.active {
+    background-color: #B9B8B4;
+    color: black;
+}
