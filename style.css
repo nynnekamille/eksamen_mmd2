@@ -162,6 +162,38 @@ img {
     justify-self: center;
 }
 
+#henvis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "web special hold";
+
+}
+
+#henvis img {
+    width: 70%;
+}
+
+#henvis img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+
+}
+
+#web {
+    grid-area: web;
+    padding-top: 15%
+}
+
+#special {
+    grid-area: special;
+    padding-top: 15%
+}
+
+#hold {
+    grid-area: hold;
+    padding-top: 15%
+}
+
 /*------ FOOTER FOOTER FOOTER ------*/
 
 footer {
