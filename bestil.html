@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <style>
         #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
+             width: 100%;
+            position: absolute;
+            top: -20vw;
+            left: 0%;
         }
 
-        .content {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        #bg_video {
+            height: 20vw;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bestilContent {
+
         }
 
         #pause {
@@ -71,9 +74,7 @@
 </nav>
 
 <body>
-    <video autoplay muted loop id="myVideo">
-  <source src="video/bgtest.MOV" type="video/mp4">
-</video>
+
 
 
     <div class="nynav">
@@ -81,7 +82,7 @@
         <a href="index.html">
             <h2>Forside</h2>
         </a>
-        <a href="webshop.html" class="active">
+        <a href="webshop.html">
 
             <h2>Webshop</h2>
 
@@ -97,14 +98,21 @@
 
         </a>
 
-        <a href="bestil.html">
+        <a href="bestil.html" class="active">
 
             <h2>Send os din bestilling</h2>
 
         </a>
     </div>
 
-    <div class="content">
+     <section id="bg_video">
+    <video autoplay muted loop id="myVideo">
+  <source src="video/bg_3.mp4" type="video/mp4">
+</video>
+        </section>
+
+
+    <div class="bestilContent">
 
         <h1>Bestil</h1>
         <p>Vi vil meget gerne udvikle dine ideer. Hvis du udfylder informationer i feltet, kan vi begynde samarbejdet</p>
@@ -137,6 +145,8 @@
 
         <button id="pause" onclick="myFunction()">Pause Filmen</button>
     </div>
+
+
     <script>
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
