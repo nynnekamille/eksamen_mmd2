@@ -559,12 +559,26 @@ input[type=textarea] {
     display: none;
 }
 
+#infoboxGitte img {
+    width: 20%;
+    height: 20%
+}
+
+
+
+
 #infoboxDorthe {
     background-color: #B9B8B4;
     height: 400px;
     width: 100%;
     display: none;
 }
+
+#infoboxDorthe img {
+    width: 20%;
+    height: 20%
+}
+
 
 
 #infoboxCharlotte {
@@ -573,6 +587,12 @@ input[type=textarea] {
     width: 100%;
     display: none;
 }
+
+#infoboxCharlotte img {
+    width: 20%;
+    height: 20%
+}
+
 
 /*imagegallery*/
 
