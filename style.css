@@ -661,12 +661,12 @@ i {
 
 .nynav {
     overflow: hidden;
-    background-color: #47505B;
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 .nynav a {
     float: left;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
