@@ -644,7 +644,7 @@ i {
 
 .web_single_kat {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .singlekat_img {
