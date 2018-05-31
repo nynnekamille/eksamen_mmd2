@@ -13,17 +13,23 @@ p {
 
 h1 {
     font-family: ralewayLight;
-    font-size: 3em;
+    font-size: 2em;
+    font-weight: lighter;
+
 }
 
 h2 {
-    font-family: didot;
-    font-size: 1.1em;
+    font-family: ralewayLight;
+    font-size: 1.2em;
+    font-weight: lighter;
+
 }
 
 h3 {
-    font-family: robotoRegular;
-    font-size: 1.1em;
+    font-family: didot;
+    font-size: 2em;
+    font-weight: lighter;
+
 }
 
 
