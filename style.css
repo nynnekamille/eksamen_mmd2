@@ -638,3 +638,19 @@ i {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+
+
+/*singlekategori i webshop*/
+
+.web_single_kat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.singlekat_img {
+    grid-area: 1/1;
+}
+
+.singlep {
+    grid-area: 1/2;
+}
