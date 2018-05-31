@@ -668,6 +668,8 @@ i {
 .nynav {
     overflow: hidden;
     background-color: rgb(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .nynav a {
