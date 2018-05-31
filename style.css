@@ -95,17 +95,16 @@ img {
 /*-jeg kan ikke se #nav-kurv nogle steder---*/
 
 #logo {
-    background-image: url(img/logo_sort.svg);
+    width: 40%;
     grid-area: logo;
     background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
     justify-self: center;
 }
 
 #nav_some {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 #logo_some {
@@ -129,17 +128,19 @@ img {
 
 
 .facebook_logo {
-    width: 35%;
+    width: 16%;
     grid-area: 1/9;
     justify-self: left;
     align-self: end;
+    padding-left: 30%
 }
 
 .instagram_logo {
-    width: 35%;
+    width: 30%;
     grid-area: 1/9;
     justify-self: right;
     align-self: end;
+    padding-right: 2%
 }
 
 /*------ FOOTER FOOTER FOOTER ------*/
