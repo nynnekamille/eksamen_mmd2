@@ -170,10 +170,10 @@
 
 
             <h1>Udregn prisen på din skillevæg</h1>
-            <h2>Der måles fra 1 cm<sup>2</sup> til 100 cm<sup>2</sup></h2> <input type="range" min="1" max="100" value="1" id="firstSlider">
+            <h2>Der måles fra 1 m<sup>2</sup> til 100 m<sup>2</sup></h2> <input type="range" min="1" max="100" value="1" id="firstSlider">
 
 
-            <h2>Dit antal kvadratmeter på ønskede område= <span id="wall"></span>cm<sup>2</sup></h2>
+            <h2>Dit antal kvadratmeter på ønskede område= <span id="wall"></span>m<sup>2</sup></h2>
             <h2>Vurderet ca. pris på din skillevæg = <span id="pris"></span>kr.</h2>
 
             <img src="img/special.jpg">
@@ -229,7 +229,7 @@
 
             console.log(this.value);
             let wall = this.value;
-            let pris = Math.round(wall * 393, 47);
+            let pris = Math.round(wall * 1932, 47);
 
 
             document.querySelector("#wall").textContent = wall;
