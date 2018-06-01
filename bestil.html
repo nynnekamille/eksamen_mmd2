@@ -37,6 +37,13 @@
             color: black;
         }
 
+        input[type=range] {
+            width: 50%;
+        }
+
+        img {
+            width: 30%;
+        }
     </style>
 </head>
 
@@ -145,6 +152,19 @@
     </div>
 
 
+    <img src="img/wallkitchen.jpg">
+    <section id="slider">
+        <h2>Der måles fra 1 cm<sup>2</sup> til 100 cm<sup>2</sup></h2> <input type="range" min="1" max="100" value="1" id="firstSlider">
+
+
+        <h2>Dit antal kvadratmeter på ønskede område= <span id="wall"></span>cm<sup>2</sup></h2>
+        <h2>Vurderet ca. pris på din skillevæg = <span id="pris"></span>kr.</h2>
+
+        <p>Prisen er inklusiv moms.</p>
+        <p>Prisen på skillee-væggen og tidee på processen afhænger af ønsket materiale-type og væg-materialet i din bolig</p>
+    </section>
+
+
     <script>
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
@@ -159,6 +179,20 @@
             }
         }
 
+        document.querySelector("#firstSlider").addEventListener("input", visPris);
+
+        function visPris() {
+
+
+            console.log(this.value);
+            let wall = this.value;
+            let pris = Math.round(wall * 393, 47);
+
+
+            document.querySelector("#wall").textContent = wall;
+            document.querySelector("#pris").textContent = pris;
+
+        }
     </script>
 
 </body>
