@@ -10,94 +10,104 @@
 </head>
 
 <body>
-    <nav role="navigation" id="nav_some">
-        <div id="menuToggle">
 
-            <input type="checkbox" />
+    <header>
 
-            <span class="first"></span>
-            <span></span>
-            <span></span>
+        <nav id="nav_some">
 
-            <ul id="menu">
-                <a href="index.html">
-                    <li>
+            <div class="navclass">
+                <button class="burgermenu">
+           <div class="bar1"></div>
+           <div class="bar2"></div>
+           <div class="bar3"></div>
+       </button>
+                <nav class="burger">
+
+                    <a href="index.html">
+
                         <h2>Forside</h2>
-                    </li>
-                </a>
-                <a href="webshop.html">
-                    <li>
+
+                    </a>
+                    <a href="webshop.html">
+
                         <h2>Webshop</h2>
-                    </li>
-                </a>
-                <a href="special.html">
-                    <li>
+
+                    </a>
+                    <a href="special.html">
+
                         <h2>Specialbestillinger</h2>
-                    </li>
-                </a>
-                <a href="om.html">
-                    <li>
-                        <h2>Om Os</h2>
-                    </li>
-                </a>
-                <a href="bestil.html">
-                    <li>
+
+                    </a>
+                    <a href="om.html">
+
+                        <h2>Vores historie</h2>
+
+                    </a>
+
+                    <a href="bestil.html">
+
                         <h2>Send os din bestilling</h2>
-                    </li>
-                </a>
-            </ul>
+
+                    </a>
+
+                </nav>
+            </div>
+
+            <div id="logo_some"><a href="index.html"><img src="img/gennemsigtigtsortlogo.svg" alt="logo_ks"></a></div>
+
+        </nav>
+
+
+        <div class="nynav">
+
+            <a href="index.html" class="active">
+                <h2>Forside</h2>
+            </a>
+            <a href="webshop.html">
+                <h2>Webshop</h2>
+            </a>
+            <a href="special.html">
+                <h2>Specialbestillinger</h2>
+            </a>
+            <a href="om.html">
+                <h2>Om Os</h2>
+            </a>
+
+            <a href="bestil.html">
+                <h2>Send os din bestilling</h2>
+            </a>
         </div>
-        <div id="logo_some"><a href="index.html"><img src="img/gennemsigtigtsortlogo.svg" alt="logo_ks"></a></div>
 
-        <div class="facebook_logo"><a href="facebook.dk"><img src="img/fb_logo_real.svg" alt="fb_ks_logo"></a></div>
-
+    </header>
 
 
-        <div class="instagram_logo"><a href="instagram.com"><img src="img/insta_logo.svg" alt="insta_ks_logo"></a></div>
-
-    </nav>
-
-    <div class="nynav">
-
-        <a href="index.html">
-            <h2>Forside</h2>
-        </a>
-        <a href="webshop.html" class="active">
-
-            <h2>Webshop</h2>
-
-        </a>
-        <a href="special.html">
-
-            <h2>Specialbestillinger</h2>
-
-        </a>
-        <a href="om.html">
-
-            <h2>Vores historie</h2>
-
-        </a>
-
-        <a href="bestil.html">
-
-            <h2>Send os din bestilling</h2>
-
-        </a>
+    <!-- The four columns -->
+    <div class="row">
+        <div class="column">
+            <img src="img/galleri1.png" alt="Awards" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/galleri2.png" alt="Skulpturer og kunst" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/galleri3.png" alt="Glasvægge" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/galleri4.png" alt="Køkkener" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/galleri5.png" alt="Kirkekunst" style="width:100%" onclick="myFunction(this);">
+        </div>
     </div>
 
-    <h2 data-header></h2>
-
-    <template>
-        <article>
-            <img data-image src="" alt="">
-            <p data-navn></p>
-        </article>
-    </template>
-
-
-    <section>
-    </section>
-
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:50%">
+        <div id="imgtext"></div>
+    </div>
+    <video autoplay muted loop id="explainer">
+  <source src="video/explainer4.mp4" type="video/mp4">
+</video>
     <footer>
         <div class="adresse">
             <p>Kvindesmedien ApS<br> Mælkevejen 83 E<br> 1440 København K</p>
@@ -107,10 +117,30 @@
         </div>
         <div class="kontakt">
             <p>kontakt@kvindesmedien.dk<br> tel: 3257 7658<br> CVR: 36087080</p>
+            <div class="some_flex">
+                <div class="facebook_logo"><a href="facebook.dk"><img src="img/fb_real.svg" alt="fb_ks_logo"></a></div>
+
+                <div class="instagram_logo"><a href="instagram.com"><img src="img/insta_real.svg" alt="insta_ks_logo"></a></div>
+            </div>
         </div>
     </footer>
 
     <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+
+        document.querySelector(".burgermenu").addEventListener("click", toggleMenu);
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            document.querySelector(".burgermenu").classList.toggle("animate");
+            document.querySelector(".burger").classList.toggle("show");
+        }
         let urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams);
         let urlKategori = urlParams.get("kategori");
@@ -177,4 +207,3 @@
 </body>
 
 </html>
-

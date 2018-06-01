@@ -36,8 +36,7 @@
             background: #ddd;
             color: black;
         }
-<<<<<<< HEAD
-=======
+
 
         input[type=range] {
             width: 50%;
@@ -46,72 +45,79 @@
         img {
             width: 30%;
         }
->>>>>>> origin/master
     </style>
 </head>
 
-<nav role="navigation" id="nav_some">
-    <div id="menuToggle">
-        <input type="checkbox" />
-        <span class="first"></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <a href="index.html">
-                <li>
-                    <h2>Forside</h2>
-                </li>
+<body>
+    <header>
+
+        <nav id="nav_some">
+
+            <div class="navclass">
+                <button class="burgermenu">
+           <div class="bar1"></div>
+           <div class="bar2"></div>
+           <div class="bar3"></div>
+       </button>
+                <nav class="burger">
+
+                    <a href="index.html">
+
+                        <h2>Forside</h2>
+
+                    </a>
+                    <a href="webshop.html">
+
+                        <h2>Webshop</h2>
+
+                    </a>
+                    <a href="special.html">
+
+                        <h2>Specialbestillinger</h2>
+
+                    </a>
+                    <a href="om.html">
+
+                        <h2>Vores historie</h2>
+
+                    </a>
+
+                    <a href="bestil.html">
+
+                        <h2>Send os din bestilling</h2>
+
+                    </a>
+
+                </nav>
+            </div>
+
+            <div id="logo_some"><a href="index.html"><img src="img/gennemsigtigtsortlogo.svg" alt="logo_ks"></a></div>
+
+        </nav>
+
+
+        <div class="nynav">
+
+            <a href="index.html" class="active">
+                <h2>Forside</h2>
             </a>
             <a href="webshop.html">
-                <li>
-                    <h2>Webshop</h2>
-                </li>
+                <h2>Webshop</h2>
             </a>
             <a href="special.html">
-                <li>
-                    <h2>Specialbestillinger</h2>
-                </li>
+                <h2>Specialbestillinger</h2>
             </a>
             <a href="om.html">
-                <li>
-                    <h2>Vores historie</h2>
-                </li>
+                <h2>Om Os</h2>
             </a>
-        </ul>
-    </div>
-</nav>
 
-<body>
+            <a href="bestil.html">
+                <h2>Send os din bestilling</h2>
+            </a>
+        </div>
 
+    </header>
 
-
-    <div class="nynav">
-
-        <a href="index.html">
-            <h2>Forside</h2>
-        </a>
-        <a href="webshop.html">
-
-            <h2>Webshop</h2>
-
-        </a>
-        <a href="special.html">
-
-            <h2>Specialbestillinger</h2>
-
-        </a>
-        <a href="om.html">
-
-            <h2>Om Os</h2>
-
-        </a>
-
-        <a href="bestil.html" class="active">
-
-            <h2>Send os din bestilling</h2>
-
-        </a>
-    </div>
 
     <section id="bg_video">
         <video autoplay muted loop id="myVideo">
@@ -168,7 +174,32 @@
     </section>
 
 
+    <footer>
+        <div class="adresse">
+            <p>Kvindesmedien ApS<br> Mælkevejen 83 E<br> 1440 København K</p>
+        </div>
+        <div class="aabningstider">
+            <p>Åbningstider:<br> Mandag lukket<br> Tirsdag – fredag 12.00 – 17.00<br> Lørdag 11.00 – 15.00<br> Pinsesøndag d. 20. maj: 12 – 16<br> 1. Pinsedag d. 21. maj: 12 – 16</p>
+        </div>
+        <div class="kontakt">
+            <p>kontakt@kvindesmedien.dk<br> tel: 3257 7658<br> CVR: 36087080</p>
+            <div class="some_flex">
+                <div class="facebook_logo"><a href="facebook.dk"><img src="img/fb_real.svg" alt="fb_ks_logo"></a></div>
+
+                <div class="instagram_logo"><a href="instagram.com"><img src="img/insta_real.svg" alt="insta_ks_logo"></a></div>
+            </div>
+        </div>
+    </footer>
+
+
     <script>
+        document.querySelector(".burgermenu").addEventListener("click", toggleMenu);
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            document.querySelector(".burgermenu").classList.toggle("animate");
+            document.querySelector(".burger").classList.toggle("show");
+        }
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
 
@@ -181,8 +212,6 @@
                 btn.innerHTML = "Play";
             }
         }
-<<<<<<< HEAD
-=======
 
         document.querySelector("#firstSlider").addEventListener("input", visPris);
 
@@ -196,9 +225,6 @@
 
             document.querySelector("#wall").textContent = wall;
             document.querySelector("#pris").textContent = pris;
-
-        }
->>>>>>> origin/master
     </script>
 
 </body>

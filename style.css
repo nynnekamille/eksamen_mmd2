@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #B9B8B4;
     text-align: center;
@@ -43,6 +47,65 @@ img {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.burgermenu {
+    cursor: pointer;
+    background: #d0d0d0;
+    border: solid 2px;
+    overflow: hidden;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #070004;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+
+}
+
+.burger {
+    z-index: 1;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    position: absolute;
+    background-color: #b9b8b4;
+    width: 100vw;
+
+
+}
+
+.burger a {
+    text-decoration: none;
+    color: #070004;
+    display: block;
+    vertical-align: middle;
+    font-family: ralewayLight;
+    transition: color 0.3s ease;
+}
+
+.burger a:hover {
+    color: #b4a1a0;
+}
+
+.show {
+    max-height: 500px;
+}
+
+.animate .bar1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.animate .bar2 {
+    opacity: 0;
+}
+
+.animate .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
 
 .special {
     position: relative;
@@ -134,22 +197,6 @@ img {
 
 
 
-.facebook_logo {
-    width: 16%;
-    grid-area: 1/9;
-    justify-self: left;
-    align-self: end;
-    padding-left: 30%
-}
-
-.instagram_logo {
-    width: 30%;
-    grid-area: 1/9;
-    justify-self: right;
-    align-self: end;
-    padding-right: 2%
-}
-
 /*INDEX*/
 
 #indledning {
@@ -222,6 +269,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "adresse aabningstider kontakt";
+    padding-top: 2%;
 }
 
 .adresse {
@@ -242,6 +290,22 @@ footer p {
 
 footer h2 {
     color: white;
+}
+
+.some_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.facebook_logo {
+    width: 6%;
+    padding-left: 35%
+}
+
+.instagram_logo {
+    width: 10%;
+    padding-right: 30%;
 }
 
 
@@ -413,41 +477,27 @@ button {
     background-size: cover;
     background-attachment: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "tekst tekst billede billede";
+    grid-template-areas: "tekst stemning";
 }
 
 
-
-/*    Infografik     */
-
-/*
-#info_grafik {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-area: "infografik";
-    background-color: #47505B;
-}
-*/
-
-/*    lav id eller class til infografik og giv den grid-area "infografik"*/
-
-/*    Holdet     */
-
-/*#holdet {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "tekst";
-    background-color: rgb(185, 184, 180);
-}*/
 
 #tekst_hold {
     grid-area: tekst;
     background-color: rgba(208, 208, 208, 0.8);
+    font-size: 1.5em;
+    padding: 0 10% 0 10%;
+    text-align: left
+}
 
+#tekst_hold h2 {
+    text-align: center;
+}
 
+#stemning {
+    grid-area: stemning;
 }
 
 #billede_hold {
@@ -613,59 +663,6 @@ input[type=textarea] {
 
 /* The grid: Four equal columns that floats next to each other */
 
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-/* Style the images inside the grid */
-
-.column img {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.column img:hover {
-    opacity: 1;
-}
-
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* The expanding image container (positioning is needed to position the close button and the text) */
-
-.container {
-    position: relative;
-    display: none;
-}
-
-/* Expanding image text */
-
-#imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-}
-
-/* Closable button inside the image */
-
-.closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-}
-
 /*KNAPPER TIL INFO OM KUNSTNERE*/
 
 i {
@@ -760,3 +757,66 @@ i {
     border-top-style: solid;
     padding-top: 2%;
 }
+
+
+/*imagegallery*/
+
+.column {
+    float: left;
+    width: 13%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+
+.column img {
+    width: 13%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+
+.row {
+    margin-left: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 28%;
+    color: white;
+    font-size: 30px;
+}
+
+/* Closable button inside the image */
+
+.closebtn {
+    position: absolute;
+    top: 4px;
+    right: 26%;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/*MEDIAQUERYS MF'ER*/
