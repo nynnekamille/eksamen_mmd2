@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillevæg</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<style>
+    input[type=range] {
+        width: 50%;
+    }
+
+    img {
+        width: 50%;
+    }
+</style>
+
+<body>
+
+    <img src="img/wallkitchen.jpg">
+    <section id="slider">
+        <input type="range" min="10" max="100" value="20" id="firstSlider">
+
+
+        <h2>Kvadratmeter = <span id="wall"></span>cm<sup>2</sup></h2>
+        <h2>Pris på skillevæg = <span id="pris"></span>kr.</h2>
+
+        <p>Prisen er inklusiv moms. Prisen afhænger af materiale-type og væg-materiale.</p>
+    </section>
+
+
+    <script>
+        document.querySelector("#firstSlider").addEventListener("input", visPris);
+
+        function visPris() {
+
+
+            console.log(this.value);
+            let wall = this.value;
+            let pris = Math.round(wall * 100);
+
+
+            document.querySelector("#wall").textContent = wall;
+            document.querySelector("#pris").textContent = pris;
+
+        }
+    </script>
+</body>
+
+
+</html>
