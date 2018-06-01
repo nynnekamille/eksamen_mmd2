@@ -154,21 +154,24 @@ img {
 
 #indledning {
     text-align: left;
-    padding: 2% 10% 0 10%;
+    padding: 2% 15% 0 15%;
     /*top left bottom right*/
 }
 
-
+#indledning h1 {
+    text-align: center;
+}
 
 #indledning p {
     font-size: 1.5em;
+    padding-bottom: 2%
 }
 
 #henvis {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "web special hold";
-    padding-bottom: 5%
+    padding-bottom: 2%
 }
 
 #henvis img {
@@ -178,6 +181,7 @@ img {
 #henvis img:hover {
     opacity: 0.6;
     cursor: pointer;
+    transform: scale(1.04);
 
 }
 
@@ -193,19 +197,22 @@ img {
 #web {
     position: relative;
     grid-area: web;
-    padding-top: 15%
+    padding-top: 15%;
+    transition: 0.5s ease-in-out;
 }
 
 #special {
     position: relative;
     grid-area: special;
-    padding-top: 15%
+    padding-top: 15%;
+    transition: 0.5s ease-in-out;
 }
 
 #hold {
     position: relative;
     grid-area: hold;
-    padding-top: 15%
+    padding-top: 15%;
+    transition: 0.5s ease-in-out;
 }
 
 /*------ FOOTER FOOTER FOOTER ------*/
@@ -746,4 +753,10 @@ i {
     height: 20vw;
     position: relative;
     overflow: hidden;
+}
+
+#opdag {
+    font-size: 2em;
+    border-top-style: solid;
+    padding-top: 2%;
 }
