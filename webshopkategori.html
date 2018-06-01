@@ -78,6 +78,8 @@
 
     </header>
 
+<!--   <button id="tilbage_knap" onclick="goBack()"><h3>&lt;</h3></button>-->
+
     <h3 data-header></h3>
 
     <template>
@@ -185,6 +187,10 @@
                     display.appendChild(klon);
                 };
             });
+        }
+
+        function goBack() {
+            window.history.back()
         }
     </script>
 </body>
