@@ -2,7 +2,6 @@
 
 <?php
 
-$from="";
 $to="theis.hmj@gmail.com";
 $name = $_REQUEST ['name'];
 $mail = $_REQUEST ['email'];
@@ -11,11 +10,12 @@ $description = $_POST ['description'];
 $measurements = $_POST ['measurements'];
 $materials = $_POST ['materials'];
 
+$subject="Besked fra" . $name . ": " .$to;
 
-$subject="Besked fra" . $navn . ": " .$to;
+$message="Info om bestilling " . $description . ": " .$measurements . ": " . $materials;
 
 
-mail($to, $mail, $phone, $description, $measurements, $materials);
+mail($to, $subject, $message);
 
 echo "Tak for din henvendelse, " . $name;
 
