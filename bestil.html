@@ -45,6 +45,20 @@
         img {
             width: 30%;
         }
+
+        #bestillingwrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "bestilContent slider";
+        }
+
+        .bestilContent {
+            grid-area: bestilContent;
+        }
+
+        #sliderRyk {
+            grid-area: slider;
+        }
     </style>
 </head>
 
@@ -125,54 +139,49 @@
 </video>
     </section>
 
+    <section id="bestillingwrapper">
+        <div class="bestilContent">
 
-    <div class="bestilContent">
+            <h1>Bestil</h1>
+            <p>Vi vil meget gerne udvikle dine ideer. Hvis du udfylder informationer i feltet, kan vi begynde samarbejdet</p>
 
-        <h1>Bestil</h1>
-        <p>Vi vil meget gerne udvikle dine ideer. Hvis du udfylder informationer i feltet, kan vi begynde samarbejdet</p>
+            <form action="bestilling.php" method="post">
+                <p>Navn</p> <input name="name" type="text" placeholder="Hvad er dit navn?" required><br>
+                <p> Mail</p><input name="email" type="email" placeholder="Hvad er din mail?" required><br>
+                <p> Telefonnummer</p> <input name="phone" type="text" placeholder="Hvordan kan vi få fat på dig?" required><br>
 
-        <form action="bestilling.php" method="post">
-            <p>Navn</p> <input name="name" type="text" placeholder="Hvad er dit navn?" required><br>
-            <p> Mail</p><input name="email" type="email" placeholder="Hvad er din mail?" required><br>
-            <p> Telefonnummer</p> <input name="phone" type="text" placeholder="Hvordan kan vi få fat på dig?" required><br>
+                <p>Hvad er din ide?</p>
+                <input name="description" type="textarea" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
+                <p> Mål:</p>
+                <input name="measurements" type="text"><br>
+                <p>Ønske til materialer:</p>
+                <input type="text" name="materials"><br>
+                <input type="submit" class="signupbtn">
 
-            <p>Hvad er din ide?</p>
-            <input name="description" type="textarea" placeholder="Skal det være et nyt køkken, en skillevæg, en vintrine-skab eller noget helt andet? Skriv alle dine ideer. Jo mere vi ved, desto bedre bliver vores samarbejde. " required><br>
-            <p> Mål:</p>
-            <input name="measurements" type="text"><br>
-            <p>Ønske til materialer:</p>
-            <input type="text" name="materials"><br>
-            <input type="submit" class="signupbtn">
+            </form>
 
-        </form>
-
-        <div class="clearfix">
-
-            <p>Ved at blive medlem af vores nyhed melder du dig enig i vores termer angående <a href="#" style="color:dodgerblue">Vilkår og Privatliv</a>.</p>
-
-
-
-
+            <div class="clearfix">
+                <p>Ved at blive medlem af vores nyhed melder du dig enig i vores termer angående <a href="#" style="color:dodgerblue">Vilkår og Privatliv</a>.</p>
+                <p>Vi vender tilbage med dig hurtigst muligt.</p>
+            </div>
         </div>
 
-        <p>Vi vender tilbage med dig hurtigst muligt.</p>
-
-        <button id="pause" onclick="myFunction()">Pause Filmen</button>
-    </div>
+        <div id="sliderRyk">
 
 
-    <img src="img/wallkitchen.jpg">
-    <section id="slider">
-        <h2>Der måles fra 1 cm<sup>2</sup> til 100 cm<sup>2</sup></h2> <input type="range" min="1" max="100" value="1" id="firstSlider">
+            <h1>Udregn prisen på din skillevæg</h1>
+            <h2>Der måles fra 1 cm<sup>2</sup> til 100 cm<sup>2</sup></h2> <input type="range" min="1" max="100" value="1" id="firstSlider">
 
 
-        <h2>Dit antal kvadratmeter på ønskede område= <span id="wall"></span>cm<sup>2</sup></h2>
-        <h2>Vurderet ca. pris på din skillevæg = <span id="pris"></span>kr.</h2>
+            <h2>Dit antal kvadratmeter på ønskede område= <span id="wall"></span>cm<sup>2</sup></h2>
+            <h2>Vurderet ca. pris på din skillevæg = <span id="pris"></span>kr.</h2>
 
-        <p>Prisen er inklusiv moms.</p>
-        <p>Prisen på skillee-væggen og tidee på processen afhænger af ønsket materiale-type og væg-materialet i din bolig</p>
+            <img src="img/special.jpg">
+
+            <p>Prisen er inklusiv moms.</p>
+            <p>Prisen på skille-væggen og tiden på processen afhænger af ønsket materiale-type og væg-materialet i din bolig</p>
+        </div>
     </section>
-
 
     <footer>
         <div class="adresse">
