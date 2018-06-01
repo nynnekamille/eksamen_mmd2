@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #B9B8B4;
     text-align: center;
@@ -677,6 +673,45 @@ i {
     -webkit-transform: rotate(45deg);
 }
 
+/*WEBSHOP OVERVIEW*/
+
+.liste_webshop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4%;
+    margin: 2%;
+}
+
+.webshop_kat {
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.webshop_kat h3 {}
+
+.webshop_kat img {
+    margin-bottom: 10%
+}
+
+
+
+.liste_webshop h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(240, 248, 255, 0.69);
+    padding: 0 100px;
+    z-index: 4;
+}
+
+.webshop_kat img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+
 
 /*singlekategori i webshop*/
 
@@ -697,9 +732,7 @@ i {
 .singlekat_img:hover {
     opacity: 0.6;
     cursor: pointer;
-
 }
-
 
 /*---NY MENU NAVIGATION---*/
 
