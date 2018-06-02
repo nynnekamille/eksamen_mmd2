@@ -850,13 +850,31 @@ i {
     cursor: pointer;
 }
 
-/*
-#tilbage_knap {
-    background-color: #47505B;
-    color: white;
-    position: absolute;
+.top i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    grid-area: pil;
+}
 
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/*
+.top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "pil h1 h1";
+}
+
+.top h1 {
+    grid-area: h1;
 }
 */
+
+
 
 /*MEDIAQUERYS MF'ER*/

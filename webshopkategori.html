@@ -64,12 +64,14 @@
             <a href="webshop.html" class="active">
                 <h2>Webshop</h2>
             </a>
-            <a href="special.html">
-                <h2>Specialbestillinger</h2>
-            </a>
+
             <a href="om.html">
                 <h2>Om Os</h2>
             </a>
+            <a href="special.html">
+                <h2>Specialbestillinger</h2>
+            </a>
+
 
             <a href="bestil.html">
                 <h2>Send os din bestilling</h2>
@@ -77,10 +79,9 @@
         </div>
 
     </header>
-
-<!--   <button id="tilbage_knap" onclick="goBack()"><h3>&lt;</h3></button>-->
-
     <h3 data-header></h3>
+
+    <i class="arrow left" onclick="goBack()"></i>
 
     <template>
         <article class="webshop_kat">
@@ -190,7 +191,7 @@
         }
 
         function goBack() {
-            window.history.back()
+            window.history.back();
         }
     </script>
 </body>
