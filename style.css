@@ -125,6 +125,11 @@ img {
     border-radius: 0%;
 }
 
+iframe {
+    width: 720px;
+    height: 350px;
+}
+
 /*----Text Typer---*/
 
 @font-face {
