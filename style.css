@@ -607,49 +607,57 @@ input[type=textarea] {
 }
 
 
+/*INFOBOXES*/
 
-
-
+#display_gitte {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 #infoboxGitte {
     background-color: #B9B8B4;
-    height: 400px;
     width: 100%;
     display: none;
 }
 
 #infoboxGitte img {
-    width: 20%;
-    height: 20%
+    width: 70%;
+    grid-area: 1/2/1/3;
 }
 
-
-
+#display_dorthe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 #infoboxDorthe {
     background-color: #B9B8B4;
-    height: 400px;
     width: 100%;
     display: none;
 }
 
 #infoboxDorthe img {
-    width: 20%;
-    height: 20%
+    width: 70%;
 }
 
+.damertxt {
+    padding: 0 10% 2% 10%;
+    font-size: 1em;
+}
 
+#display_charlotte {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 #infoboxCharlotte {
     background-color: #B9B8B4;
-    height: 400px;
     width: 100%;
     display: none;
 }
 
 #infoboxCharlotte img {
-    width: 20%;
-    height: 20%
+    width: 70%;
 }
 
 
@@ -664,6 +672,7 @@ input[type=textarea] {
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 5px;
+    margin-top:
 }
 
 .down {
@@ -779,8 +788,8 @@ input[type=textarea] {
 }
 
 #explainer {
-    width: 60%;
-    padding-top: 10%;
+    width: 80%;
+
 
 }
 
@@ -806,16 +815,27 @@ input[type=textarea] {
 
 /*imagegallery*/
 
+/* special-side */
+
+#specialside p {
+    max-width: 80%;
+    margin: 3vw auto;
+}
+
+
+
+/*imagegallery*/
+
 .column {
-    float: left;
+    /*
     width: 13%;
     padding: 10px;
+*/
 }
 
 /* Style the images inside the grid */
 
 .column img {
-    width: 13%;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -827,14 +847,21 @@ input[type=textarea] {
 /* Clear floats after the columns */
 
 .row {
-    margin-left: 25%;
+    margin: 10px 10% 10px 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+
 }
 
+
+/*
 .row:after {
     content: "";
-    display: table;
+    display: ;
     clear: both;
 }
+*/
 
 /* The expanding image container (positioning is needed to position the close button and the text) */
 
