@@ -45,7 +45,7 @@ img {
 
 .burgermenu {
     cursor: pointer;
-    background: #d0d0d0;
+    background: #b9b8b4;
     border: solid 2px;
     overflow: hidden;
 }
@@ -89,6 +89,7 @@ img {
 
 .show {
     max-height: 500px;
+    background-color: #B4A1A0;
 }
 
 .animate .bar1 {
@@ -718,6 +719,60 @@ input[type=textarea] {
     transform: scale(1.04);
 }
 
+#myVideo {
+    width: 100%;
+    position: absolute;
+    top: -10vw;
+    left: 0%;
+}
+
+#bg_video {
+    height: 20vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.bestilContent {}
+
+#pause {
+    width: 100px;
+    font-size: 5px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#pause:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+input[type=range] {
+    width: 50%;
+}
+
+
+#bestillingwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "bestilContent slider";
+}
+
+.bestilContent {
+    grid-area: bestilContent;
+}
+
+#sliderRyk {
+    grid-area: slider;
+}
+
+#sliderRyk img {
+    width: 30%;
+}
+
 /*singlekategori i webshop*/
 
 .web_single_kat {
@@ -928,3 +983,167 @@ i {
 
 
 /*MEDIAQUERYS MF'ER*/
+
+/* phone portrait og landscape */
+
+@media screen and (max-width: 414px) and (orientation: portrait) {
+    .nynav {
+        max-height: 0;
+    }
+
+    #logo_some {
+        width: 80%;
+    }
+    #bg_video {
+        display: none;
+    }
+    #indledning h1 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    #indledning p {
+        font-size: 1em;
+    }
+    #henvis {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "web" "special" "hold";
+    }
+    #web {
+        padding-top: 0;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "adresse" "aabningstider" "kontakt";
+    }
+    .facebook_logo {
+        padding: 2% 0 0 35%;
+    }
+    .instagram_logo {
+        padding: 2% 30% 0 0;
+    }
+
+    .liste_webshop {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 4%;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .liste_webshop h3 {
+        padding: 0 50px;
+        font-size: 1.5em
+    }
+    .kurv {
+        width: 34%;
+        grid-area: 1;
+        justify-self: end;
+        background-color: #b9b8b4;
+        margin: 2% 46% 0 0;
+    }
+    .antal {
+        width: 34%;
+        grid-area: 1;
+        background-color: #b9b8b4;
+        justify-self: center;
+        margin: 2% 0 0 28%;
+    }
+    .web_single_kat {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .singlekat_img {
+        width: 100%;
+        padding: 0 0 0 0;
+        grid-area: 1/1;
+    }
+    .gridcol1 {
+        padding: 0 0 0 5%;
+        text-align: left;
+        grid-area: 2;
+    }
+    .gridcol2 {
+        padding: 0 0 0 5%;
+        text-align: left;
+        grid-area: 3;
+    }
+    .gridcol3 {
+
+        padding: 0 0 0 5%;
+        text-align: left;
+        font-size: 1.5em;
+        grid-area: 4;
+    }
+    #specialside p {
+        max-width: 80%;
+        margin: 10vw auto;
+        font-size: 1em;
+    }
+    #explainer {
+        width: 100%;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+    #expandedImg {
+        width: 65%;
+    }
+    #damer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "dorthe" "charlotte" "gitte"
+    }
+    #billede_samarbejde {
+        display: none;
+    }
+    #samarbejde {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #bestillingwrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "bestilContent" "slider";
+        margin: 2%;
+    }
+    input {
+        height: 5vw;
+    }
+    #bestillingwrapper h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+    .nynav {
+        max-height: 0;
+    }
+
+}
+
+/* tablet portrait og landscape */
+
+@media screen and (min-width: 415px) and (max-width: 737px) and (orientation: portrait) {
+    .nynav {
+        max-height: 0;
+    }
+}
+
+
+@media screen and (min-width: 737px) and (orientation: landscape) {
+    .burgermenu {
+        visibility: hidden;
+    }
+}
+
+
+/* desktop */
+
+@media screen and (min-width: 1024px) {
+    .burgermenu {
+        visibility: hidden;
+    }
+}
