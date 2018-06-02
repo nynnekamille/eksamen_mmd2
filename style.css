@@ -659,7 +659,7 @@ input[type=textarea] {
 
 /*KNAPPER TIL INFO OM KUNSTNERE*/
 
-i {
+.arrow {
     border: solid #070004;
     border-width: 0 6px 6px 0;
     display: inline-block;
@@ -719,6 +719,8 @@ i {
 
 .singlekat_img {
     grid-area: img;
+    width: 80%;
+    padding: 0 0 0 5%;
 }
 
 .gridcol1 {
@@ -864,32 +866,38 @@ i {
 
 i {
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 3px;
-    grid-area: tekst;
 }
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+}
+
+.virk {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
 }
 
 .kurv {
-    width: 5%;
+    width: 10%;
+    grid-area: 1/2;
+    justify-self: end;
+    background-color: #B9B8B4;
+    margin: 2% 2% 0 0;
 }
 
-/*
-.top {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "pil h1 h1";
+.antal {
+    width: 10%;
+    grid-area: 1/2;
+    background-color: #B9B8B4;
+    justify-self: center;
+    margin: 2% 0 0 2%;
 }
 
-.top h1 {
-    grid-area: h1;
-}
-*/
+
 
 /*MEDIAQUERYS MF'ER*/
