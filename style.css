@@ -714,23 +714,35 @@ i {
 .web_single_kat {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "img tekst"
 }
 
 .singlekat_img {
-    grid-area: 1/1;
+    grid-area: img;
 }
 
-.singlep {
-    grid-area: 1/2;
+.gridcol1 {
+    grid-area: tekst;
+    align-self: start;
+    text-align: left;
+    padding: 0 0 0 5%;
 }
 
-
-/*
-.singlekat_img:hover {
-    opacity: 0.6;
-    cursor: pointer;
+.gridcol2 {
+    grid-area: tekst;
+    align-self: center;
+    padding: 0 0 45% 5%;
+    text-align: left;
 }
-*/
+
+.gridcol3 {
+    grid-area: tekst;
+    align-self: end;
+    padding: 0 0 45% 5%;
+    text-align: left;
+    font-size: 1.5em;
+}
+
 
 /*---NY MENU NAVIGATION---*/
 
@@ -850,17 +862,22 @@ i {
     cursor: pointer;
 }
 
-.top i {
+i {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    grid-area: pil;
+    grid-area: tekst;
 }
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+
+}
+
+.kurv {
+    width: 5%;
 }
 
 /*
@@ -874,7 +891,5 @@ i {
     grid-area: h1;
 }
 */
-
-
 
 /*MEDIAQUERYS MF'ER*/
