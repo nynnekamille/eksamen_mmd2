@@ -87,12 +87,12 @@ img {
 }
 
 .burger a:hover {
-    color: #b4a1a0;
+    color: #d0d0d0;
 }
 
 .show {
     max-height: 500px;
-    background-color: #B4A1A0;
+    background-color: #b4a1a0;
 }
 
 .animate .bar1 {
@@ -523,7 +523,6 @@ button {
 #tekst_samarbejde {
     height: 34vw;
     min-height: 300px;
-    min-width: 350px;
     grid-area: tekst;
     background-color: rgba(208, 208, 208, 0.8);
     overflow: scroll;
@@ -1004,7 +1003,9 @@ i {
     margin: 2% 0 0 2%;
 }
 
-
+#expandedImg {
+        width: 65%;
+    }
 
 /*MEDIAQUERYS MF'ER*/
 
@@ -1117,7 +1118,7 @@ i {
         grid-gap: 25px;
     }
     #expandedImg {
-        width: 65%;
+        width: 100%;
     }
     #charlotte {
         width: 90%;
@@ -1154,6 +1155,7 @@ i {
     }
     iframe {
         width: 400px;
+        max-width: 98%;
         height: 252px;
     }
     #tekst_hold {
