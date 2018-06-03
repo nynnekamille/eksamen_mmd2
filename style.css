@@ -510,7 +510,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "billede billede tekst";
+    grid-template-areas: "billede billede tekst tekst";
 }
 
 
@@ -526,7 +526,9 @@ button {
     grid-area: tekst;
     background-color: rgba(208, 208, 208, 0.8);
     overflow: scroll;
-
+    text-align: left;
+    padding: 0 5% 0 5%;
+    font-size: 1.1em;
 }
 
 #tekst_samarbejde a {
@@ -540,13 +542,11 @@ button {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 #tekst_samarbejde ul {
     list-style-type: none;
     padding: 0;
-
 }
 
 /* ---INPUT BESTILLING.HTML--- */
