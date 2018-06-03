@@ -544,7 +544,7 @@ button {
 
 }
 
-#tekst_samarbejde ul {
+#tekst_samarbejde li {
     font-family: ralewayLight;
     font-size: 0.8em;
     list-style-type: none;
@@ -898,6 +898,10 @@ input[type=range] {
 #specialside p {
     max-width: 80%;
     margin: 3vw auto;
+}
+
+#specialside a {
+    text-decoration: none;
 }
 
 
