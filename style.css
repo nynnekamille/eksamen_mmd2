@@ -186,6 +186,7 @@ iframe {
     width: 40%;
     grid-area: 1/4/1/7;
     justify-self: center;
+    margin: 2% 0 2% 0;
 }
 
 /* grid-column-end: 8; */
@@ -301,12 +302,12 @@ footer h2 {
 }
 
 .facebook_logo {
-    width: 6%;
+    width: 3%;
     padding-left: 35%
 }
 
 .instagram_logo {
-    width: 10%;
+    width: 6%;
     padding-right: 30%;
 }
 
