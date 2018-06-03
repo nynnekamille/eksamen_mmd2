@@ -130,7 +130,7 @@ img {
 
 iframe {
     width: 720px;
-    height: 350px;
+    height: 480px;
 }
 
 /*----Text Typer---*/
@@ -534,6 +534,7 @@ button {
 #tekst_samarbejde {
     height: 34vw;
     min-height: 300px;
+    min-width: 350px;
     grid-area: tekst;
     background-color: rgba(208, 208, 208, 0.8);
     overflow: scroll;
@@ -543,14 +544,19 @@ button {
 #tekst_samarbejde a {
     text-decoration: none;
     font-family: ralewayLight;
-
+    font-size: 0.8em;
 }
 
 #tekst_samarbejde li {
     font-family: ralewayLight;
-    font-size: 0.8em;
     list-style-type: none;
     margin: 0;
+    padding: 0;
+
+}
+
+#tekst_samarbejde ul {
+    list-style-type: none;
     padding: 0;
 
 }
@@ -1158,7 +1164,7 @@ i {
         grid-template-areas: "tekst" "stemning";
     }
     iframe {
-        width: 400px;
+        max-width: 400px;
         height: 252px;
     }
     #tekst_hold {
@@ -1258,6 +1264,11 @@ i {
         padding: 0 5px;
     }
 }
+
+iframe {
+        max-width: 400px;
+        height: 252px;
+    }
 
 
 @media screen and (min-width: 737px) and (orientation: landscape) {
