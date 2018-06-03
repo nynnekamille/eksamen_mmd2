@@ -130,7 +130,7 @@ img {
 
 iframe {
     width: 720px;
-    height: 480px;
+    height: 350px;
 }
 
 /*----Text Typer---*/
@@ -1153,7 +1153,7 @@ i {
         grid-template-areas: "tekst" "stemning";
     }
     iframe {
-        max-width: 400px;
+        width: 400px;
         height: 252px;
     }
     #tekst_hold {
@@ -1254,10 +1254,6 @@ i {
     }
 }
 
-iframe {
-        max-width: 400px;
-        height: 252px;
-    }
 
 
 @media screen and (min-width: 737px) and (orientation: landscape) {
@@ -1269,6 +1265,7 @@ iframe {
     }
 
 }
+
 
 
 /* desktop */
