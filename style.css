@@ -162,7 +162,7 @@ iframe {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "menu logo kurv";
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 
@@ -178,7 +178,7 @@ iframe {
 #nav_some {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #logo_some {
@@ -463,17 +463,6 @@ button {
 
 
 
-/*    Infografik     */
-
-#info_grafik {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-area: "infografik";
-    background-color: #47505B;
-}
-
-/*    lav id eller class til infografik og giv den grid-area "infografik"*/
-
 /*    Holdet     */
 
 #holdet {
@@ -603,7 +592,7 @@ input[type=textarea] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "dorthe charlotte gitte";
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #damer p {
@@ -703,7 +692,7 @@ input[type=textarea] {
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 5px;
-    margin-top:
+    margin-top: 10px;
 }
 
 .down {
@@ -845,7 +834,7 @@ input[type=range] {
 
 .nynav {
     overflow: hidden;
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
