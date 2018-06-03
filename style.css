@@ -84,6 +84,8 @@ img {
     vertical-align: middle;
     font-family: ralewayLight;
     transition: color 0.3s ease;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .burger a:hover {
