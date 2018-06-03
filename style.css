@@ -9,6 +9,7 @@ body {
 p {
     font-family: ralewayLight;
     font-size: 0.8em;
+
 }
 
 h1 {
@@ -587,7 +588,6 @@ input[type=textarea] {
 
 #dorthe {
     grid-area: dorthe;
-    height: 50%;
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
@@ -596,7 +596,6 @@ input[type=textarea] {
 
 #gitte {
     grid-area: charlotte;
-    height: 50%;
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
@@ -605,7 +604,6 @@ input[type=textarea] {
 
 #charlotte {
     grid-area: gitte;
-    height: 50%;
     width: 50%;
     background-repeat: no-repeat;
     justify-self: center;
@@ -649,6 +647,7 @@ input[type=textarea] {
 .damertxt {
     padding: 0 10% 2% 10%;
     font-size: 1em;
+    text-align: left;
 }
 
 #display_charlotte {
@@ -684,6 +683,7 @@ input[type=textarea] {
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    margin-left: 48%;
 }
 
 /*WEBSHOP OVERVIEW*/
@@ -995,6 +995,9 @@ i {
     .nynav {
         max-height: 0;
     }
+    h1 {
+        font-size: 1.5em;
+    }
 
     #logo_some {
         width: 80%;
@@ -1016,6 +1019,7 @@ i {
     }
     #web {
         padding-top: 0;
+
     }
     footer {
         display: grid;
@@ -1096,10 +1100,14 @@ i {
     #expandedImg {
         width: 65%;
     }
-    #damer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "dorthe" "charlotte" "gitte"
+    #charlotte {
+        width: 90%;
+    }
+    #gitte {
+        width: 90%;
+    }
+    #dorthe {
+        width: 90%;
     }
     #billede_samarbejde {
         display: none;
@@ -1120,6 +1128,27 @@ i {
     #bestillingwrapper h1 {
         font-size: 1.5em;
     }
+    #holdet {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "tekst" "stemning";
+    }
+    iframe {
+        width: 400px;
+        height: 252px;
+    }
+    #tekst_hold {
+        font-size: 1.1em;
+    }
+    #tekst_hold h2 {
+        font-size: 1.5em;
+    }
+    .maps p {
+        padding: 0 5% 0 5%;
+    }
+    .down {
+        margin-left: 6%;
+    }
 }
 
 @media screen and (max-width: 736px) and (orientation: landscape) {
@@ -1127,6 +1156,69 @@ i {
         max-height: 0;
     }
 
+    #indledning p {
+        font-size: 1.1em;
+    }
+    #logo_some {
+        width: 55%;
+    }
+    #henvis img {
+        width: 85%;
+    }
+    #henvis .centered {
+        padding: 0 50px;
+    }
+    .liste_webshop h3 {
+        padding: 0 50px;
+    }
+    .liste_webshop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #holdet {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "tekst" "stemning";
+    }
+    .arrow {
+        margin-right: 40%;
+    }
+    #dorthe {
+        width: 65%;
+    }
+    #gitte {
+        width: 65%;
+    }
+    #charlotte {
+        width: 65%;
+    }
+    #samarbejde {
+        grid-template-areas: "tekst tekst tekst";
+    }
+    .maps p {
+        padding: 0 5% 0 5%;
+    }
+    #bestillingwrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "bestilContent" "slider";
+    }
+    .left {
+        margin-left: 42%;
+    }
+    .antal {
+        width: 18%;
+    }
+    .kurv {
+        width: 18%;
+    }
+    #myVideo {
+        display: none;
+    }
+    .gridcol2 {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
 }
 
 /* tablet portrait og landscape */
@@ -1135,6 +1227,12 @@ i {
     .nynav {
         max-height: 0;
     }
+    .liste_webshop {
+        grid-column-gap: 2%;
+    }
+    .liste_webshop h3 {
+        padding: 0 5px;
+    }
 }
 
 
@@ -1142,6 +1240,10 @@ i {
     .burgermenu {
         visibility: hidden;
     }
+    .down {
+        margin-left: 0;
+    }
+
 }
 
 
